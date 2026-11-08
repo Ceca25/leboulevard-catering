@@ -1,0 +1,1952 @@
+html {
+    scroll-behavior: auto !important; /* Desactiva transiciones suaves nativas que causan rebotes */
+}
+
+/* ==========================================================================
+   1. ESTILOS GENERALES Y CONFIGURACIÓN BASE
+   ========================================================================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    color: #2D2D2D;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Encabezados Globales de Secciones */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #C00000;
+    text-align: center;
+    margin: 0;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO (BARRA SUPERIOR DE CONTACTO - PREMIUM)
+   ========================================================================== */
+.top-bar {
+    background-color: #C00000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px; /* Franja esbelta y sutil */
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.top-bar .logo {
+    height: 50px; /* Proporción controlada corporativa */
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px; /* Ajuste milimétrico de filas */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor horizontal para teléfono y correo */
+.contact-block {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-line i {
+    font-size: 0.88rem;
+    color: #FFFFFF;
+}
+
+.contact-line:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* Ubicación secundaria en segundo plano visual */
+.item-location {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.78rem;
+}
+
+.item-location i {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Redes Sociales en la Barra Superior (Mismo estilo que el Footer) */
+.top-social-icons {
+    display: flex;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.top-social-icons a {
+    width: 26px; /* Sutilmente compacto para mantener la barra esbelta */
+    height: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.78rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-social-icons a:hover {
+    background-color: #FFFFFF;
+    color: #C00000;
+    border-color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   3. MENÚ DE NAVEGACIÓN PRINCIPAL (STICKY) - ULTRA PREMIUM
+   ========================================================================== */
+.menu-bar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 10px 0; /* Equilibra la altura visual con el botón del carrito */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura quedar sobre las imágenes del catálogo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Contenedor Flex para alinear enlaces y el carrito a los extremos */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Control del Logo dentro del menú */
+.logo-container {
+    max-width: 180px; /* Tamaño ideal para que luzca elegante sin desbordar */
+}
+
+.logo-container .logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Ajuste de la lista principal */
+.menu-bar ul.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar ul.nav-links > li {
+    display: inline-block;
+    margin: 0 15px; 
+    position: relative; /* Clave para el posicionamiento absoluto del submenú */
+}
+
+.menu-bar ul.nav-links > li a {
+    color: #4A4A4A;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 0; 
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Elegante efecto de línea expansiva inferior */
+.menu-bar ul.nav-links > li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #C00000;
+    transition: width 0.3s ease;
+}
+
+.menu-bar ul.nav-links > li a:hover,
+.menu-bar ul.nav-links > li a.active {
+    color: #C00000;
+}
+
+.menu-bar ul.nav-links > li a:hover::after,
+.menu-bar ul.nav-links > li a.active::after {
+    width: 100%;
+}
+
+/* --- ESTILOS PARA EL MENÚ DESPLEGABLE (DROPDOWN MODERNO) --- */
+.menu-bar .item-arrow {
+    font-size: 11px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* Animación de la flecha al pasar el mouse */
+.menu-bar li.dropdown:hover .item-arrow {
+    transform: rotate(180deg);
+    color: #C00000;
+}
+
+/* Puente invisible para que el puntero no pierda el foco en el hueco de separación */
+.menu-bar ul.nav-links > li.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 18px; 
+}
+
+/* ==========================================================================
+   SUBMENÚ DESPLEGABLE (DROPDOWN) - ALINEACIÓN IZQUIERDA SIMÉTRICA PREMIUM
+   ========================================================================== */
+
+/* Contenedor principal del submenú */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;                     /* Alinea el inicio del menú con la palabra "SERVICIOS" */
+    background-color: #FFFFFF;
+    width: 230px;               /* Ancho ideal para que las palabras largas respiren sin apretarse */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra suave profesional */
+    padding: 8px 0;
+    list-style: none;
+    display: none;              /* Oculto por defecto */
+    z-index: 1000;
+    border-radius: 4px;         /* Bordes sutilmente suavizados */
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;     /* Asegura que el ancho sea exacto */
+}
+
+/* Mostrar al pasar el cursor sobre el elemento padre */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: dropdownFadeIn 0.2s ease-out;
+}
+
+/* Elemento de la lista (Fila) */
+.dropdown-menu li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Enlace interno (El botón interactivo) */
+.dropdown-menu li a {
+    display: block;
+    width: 100%;                
+    padding: 11px 24px !important; /* Relleno lateral idéntico a la izquierda y derecha */
+    text-align: left !important;   /* Fuerza la alineación estricta a la izquierda */
+    color: #4A4A4A;             /* Gris oscuro editorial */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;         /* Tamaño estilizado y moderno */
+    text-transform: uppercase;   /* Mayúsculas como en tu diseño anterior */
+    letter-spacing: 0.6px;      /* Espaciado limpio entre letras */
+    transition: all 0.2s ease;
+    box-sizing: border-box;     /* Evita que el padding ensanche la caja */
+}
+
+/* ESTADO HOVER: Resalte en rojo bajo manteniendo la estructura intacta */
+.dropdown-menu li a:hover {
+    color: #C00000 !important;             /* Texto cambia al rojo principal */
+    background-color: #FFF0F0 !important;  /* Fondo rojo sutil/bajo de resalte */
+    text-align: left !important;           /* Reafirma la alineación izquierda */
+    padding: 11px 24px !important;         /* Evita cualquier movimiento visual o salto */
+}
+
+/* ==========================================================================
+   4. BOTÓN DE MI CARRITO (DISEÑO PREMIUM HORIZONTAL)
+   ========================================================================== */
+.cart-container {
+    display: flex;
+    align-items: center;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Separación sutil entre el carrito negro y el texto */
+    text-decoration: none;
+    background: none !important; /* Eliminamos cualquier fondo gris u ovalado */
+    padding: 0 !important;       /* Sin rellenos artificiales */
+    border: none !important;      /* Sin bordes de caja */
+    transition: opacity 0.2s ease;
+}
+
+.cart-btn:hover {
+    opacity: 0.7; /* Suave efecto visual al pasar el cursor */
+}
+
+/* Icono del carrito en color negro sólido */
+.cart-icon {
+    color: #111111;
+    font-size: 15px;
+}
+
+/* Texto plano continuo */
+.cart-text {
+    color: #111111;
+    font-size: 15px;
+    font-weight: 400; /* Tipografía limpia y ligera, no negrita */
+    font-family: inherit;
+    text-transform: none; /* Evita mayúsculas automáticas */
+}
+
+
+html {
+    scroll-behavior: auto !important; /* Desactiva transiciones suaves nativas que causan rebotes */
+}
+
+/* ==========================================================================
+   5. SECCIÓN HERO (PORTADA PRINCIPAL Y GALERÍA)
+   ========================================================================== */
+.hero {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos hacia arriba */
+    min-height: calc(100vh - 160px); 
+    background-color: #FFFFFF;
+    padding: 30px 20px 40px 20px; /* Reducimos el espacio superior para subir el título */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 1. TEXTO DE BIENVENIDA (MÁS ARRIBA) */
+.hero-content {
+    order: 1;
+    margin-bottom: 5px; /* Reduce espacio debajo del texto */
+    max-width: 900px; /* Permite una lectura cómoda */
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; /* Incrementado ligeramente para mayor impacto */
+    color: #C00000;
+    margin: 10px 0 10px 0; /* Espaciado muy controlado */
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 1.2rem; /* Texto un poquito más grande y elegante */
+    color: #555555; 
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+/* 2. BOTÓN DE LLAMADO A LA ACCIÓN (CTA) */
+.cta {
+    order: 2; /* Lo colocamos justo debajo del texto y arriba de las fotos */
+    display: inline-block;
+    background-color: #C00000;
+    color: #FFFFFF;
+    padding: 14px 38px; /* Ligeramente más estilizado */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(192, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    margin-bottom: 25px; /* Separación prudente de las imágenes */
+}
+
+.cta:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+}
+
+/* 3. GALERÍA DE IMÁGENES (MÁS GRANDES Y PROFESIONALES) */
+.image-gallery {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio limpio entre cuadros */
+    margin-top: 15px;
+    width: 100%;
+    max-width: 1140px; /* Aumentado para que la fila ocupe más espacio horizontal */
+    flex-wrap: wrap; /* Se adapta a pantallas más pequeñas de manera automática */
+}
+
+.image-gallery img {
+    flex: 1 1 240px; /* Permite que crezcan dinámicamente */
+    max-width: 260px; /* Aumentado de 210px a 260px para que se vean imponentes */
+    height: 260px; /* Hacemos que sean perfectamente cuadradas */
+    object-fit: cover; /* Recorta la imagen para que rellene el cuadro perfectamente sin deformarse */
+    border-radius: 16px; /* Bordes un poco más suaves y modernos */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra difuminada de estilo UI moderno */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.image-gallery img:hover {
+    transform: translateY(-8px); /* Elevación elegante */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Sombra más profunda al pasar el cursor */
+}
+
+/* ==========================================================================
+   6. SECCIÓN NOSOTROS (DISEÑO EDITORIAL EQUILIBRADO)
+   ========================================================================== */
+.nosotros {
+    background-color: #FAFAFA; /* Fondo hueso de alta gama */
+    padding: 60px 20px;
+}
+
+.nosotros-container {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: center;
+}
+
+.nosotros-img {
+    flex: 1;
+    position: relative;
+}
+
+.nosotros-img img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    display: block;
+}
+
+.nosotros-text {
+    flex: 1.2;
+    text-align: left;
+}
+
+.nosotros-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #C00000;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    text-align: left;
+}
+
+.nosotros-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7; /* Interlineado elegante para descanso visual */
+    color: #4A4A4A;
+    margin: 0 0 16px 0;
+}
+
+/* ==========================================================================
+   7. SECCIÓN PROCESOS DE ALQUILER (TARJETAS TRIDIMENSIONALES)
+   ========================================================================== */
+.procesos {
+    background-color: #FFFFFF;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.procesos h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: #C00000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.procesos h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #1A1A1A;
+    margin: 0 0 10px 0;
+}
+
+.procesos > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 45px;
+}
+
+/* Grid Autoadaptable de 6 pasos */
+.procesos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.proceso {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    padding: 35px 25px 25px 25px;
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Círculos numéricos flotantes */
+.proceso span {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #C00000;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(192, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.proceso h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #1A1A1A;
+    margin: 10px 0 10px 0;
+}
+
+.proceso p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: #666666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Animaciones Interactivas del Proceso */
+.proceso:hover {
+    transform: translateY(-5px);
+    border-color: transparent;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.proceso:hover span {
+    background-color: #1A1A1A;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   8. FORMULARIOS, SECCIÓN DE CONTACTO Y COTIZADOR DINÁMICO (PREMIUM)
+   ========================================================================== */
+
+/* Contenedor Principal (Layout de Dos Columnas) */
+.contacto-layout-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr; /* Ajuste sutil de proporciones */
+    gap: 40px;
+    max-width: 1300px; /* Subimos de 1200px a 1300px para ensanchar las cajas de texto */
+    margin: 40px auto 80px auto; /* 💡 CAMBIADO: Agrega 80px abajo para despegarlo del pie de página */
+    padding: 0 30px; /* Un poco más de aire a los bordes de la pantalla */
+    align-items: start;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   COLUMNA IZQUIERDA: FORMULARIO
+   ========================================== */
+.formulario-simple {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 40px 35px; /* Más espacio interno */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.formulario-simple h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1A1A1A;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: left; /* Alineación limpia al inicio del formulario */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulario-simple h2 i {
+    color: #C00000; /* Icono en rojo corporativo */
+}
+
+/* Formulario interno estructurado con CSS Grid */
+.formulario-simple form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas simétricas internas */
+    gap: 20px;                             /* Separación premium entre campos */
+}
+
+/* Bloque contenedor de cada etiqueta e input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Separación vertical entre etiqueta y caja de texto */
+}
+
+.formulario-simple label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #2D2D2D;
+}
+
+/* Asterisco de campo obligatorio */
+.formulario-simple label .req {
+    color: #C00000;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* Inputs de texto, fecha y áreas de mensaje */
+.formulario-simple input,
+.formulario-simple textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #DCDCDC;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: #2D2D2D;
+    background-color: #FAFAFA;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formulario-simple input:focus,
+.formulario-simple textarea:focus {
+    outline: none;
+    border-color: #C00000;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.08); /* Brillo sutil de enfoque */
+}
+
+/* Propiedad para forzar a que un elemento abarque las 2 columnas */
+.textarea-full {
+    grid-column: span 2;
+}
+
+/* Casilla de Políticas de Privacidad */
+.politicas-checkbox {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.politicas-checkbox label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: #555555;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.politicas-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #C00000; /* Tinte del checkbox nativo en rojo */
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.politicas-checkbox label a {
+    color: #C00000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.politicas-checkbox label a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de Enviar Formulario */
+.btn-form {
+    display: block;
+    width: 100%;
+    background-color: #C00000;
+    color: #FFFFFF;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.15);
+}
+
+.btn-form i {
+    margin-right: 8px;
+}
+
+.btn-form:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   COLUMNA DERECHA: MULTIMEDIA Y ACCESO ONLINE
+   ========================================== */
+.columna-derecha-cotizador {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta contenedora de la foto referencial */
+.tarjeta-referencia-galeria {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+    height: 500px; /* Subimos de 340px a 440px para que cubra elegantemente el alto del formulario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-referencia {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste dinámico inteligente para que la foto no se deforme */
+}
+
+/* Bloque inferior: "Cotiza tu evento en línea" */
+.tarjeta-cotizar-linea {
+    background-color: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.tarjeta-cotizar-linea h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1A1A1A;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.tarjeta-cotizar-linea h3 i {
+    color: #C00000;
+    margin-right: 6px;
+}
+
+.tarjeta-cotizar-linea p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.92rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Botón estilizado para Cotizar Online lateral */
+.btn-cotizar-online {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C00000;
+    color: #FFFFFF;
+    padding: 13px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.15);
+}
+
+.btn-cotizar-online i {
+    margin-right: 8px;
+}
+
+.btn-cotizar-online:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   DISEÑO ADAPTABLE Y RESPONSIVO (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Configuración para Tablets (Colapsa las dos columnas principales a una sola) */
+@media (max-width: 992px) {
+    .contacto-layout-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px; /* Un poco más de aire en los bordes en tablets */
+    }
+    
+    .tarjeta-referencia-galeria {
+        height: 320px; /* Reducimos la altura de la foto en tablet/móvil para que no se vea gigante */
+    }
+}
+
+/* Configuración para Celulares (Colapsa el formulario interno a una sola columna) */
+@media (max-width: 600px) {
+    .formulario-simple form {
+        grid-template-columns: 1fr; /* Todo se alinea verticalmente de forma limpia */
+        gap: 15px; /* Reducimos ligeramente el espacio entre campos en pantallas chicas */
+    }
+    
+    /* Forzamos a que los bloques anchos ocupen el único carril disponible sin desbordar */
+    .textarea-full {
+        grid-column: span 1 !important; 
+    }
+    
+    .formulario-simple {
+        padding: 25px 20px; /* Menos espacio interno para aprovechar la pantalla del celular */
+    }
+    
+    .formulario-simple h2 {
+        font-size: 1.3rem; /* Texto de cabecera un poco más sutil en móviles */
+    }
+}
+
+
+/* ==========================================================================
+   9. PIE DE PÁGINA (FOOTER CORPORATIVO PREMIUM)
+   ========================================================================== */
+.main-footer {
+    background-color: #C00000;
+    color: #FFFFFF;
+    padding: 40px 0 20px 0; /* Un poco más de aire arriba para la descripción */
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px; /* 🔥 ANTES: 1100px. Ampliado para aprovechar el espacio en los extremos */
+    margin: 0 auto;
+    padding: 0 50px;    /* Un poco más de aire en los bordes de la pantalla */
+    gap: 50px;          /* Mayor separación entre columnas */
+    box-sizing: border-box;
+}
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* 🔥 OPTIMIZACIÓN CLAVE: Espacio controlado para el logo y la descripción */
+.footer-column.col-logo {
+    flex: 2.8;         /* 🔥 ANTES: 1.8. Le damos más prioridad de expansión */
+    max-width: 480px;  /* 🔥 ANTES: 360px. Permite que el texto se estire a lo ancho y reduzca sus líneas */
+}
+
+/* 🔥 NUEVA CLAVE: Centrado estructural para la columna de Redes + Libro */
+.footer-column.col-social {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-column.col-social h3 {
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo para el nuevo logo del footer */
+.footer-brand-logo {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Estilo elegante y legible para la descripción detallada */
+.footer-company-desc {
+   font-size: 0.78rem !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-bottom: 0px !important; /* Quitamos margen innecesario */
+    text-align: justify;
+    font-weight: 300;
+}
+
+/* El libro de reclamaciones ahora se apoya debajo elegantemente en su nueva columna */
+.footer-book-img {
+    height: auto;
+    width: 85px;
+    opacity: 0.9;
+    margin-top: 25px; /* Espaciado elegante debajo de los iconos de redes */
+    transition: transform 0.3s ease;
+}
+
+.footer-book-img:hover {
+    transform: scale(1.05); /* Efecto sutil premium al pasar el cursor */
+}
+
+.footer-column h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 12px 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-column p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-weight: 300;
+}
+
+.footer-email-text {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    margin-top: 10px !important; /* Espacio extra respecto al párrafo de arriba */
+    margin-bottom: 8px !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem !important;
+}
+
+/* Redes del Footer con Enmarcado Estético */
+.footer-social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-social-icons a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-icons a:hover {
+    background-color: #FFFFFF;
+    color: #C00000;
+    border-color: #FFFFFF;
+}
+
+/* Centrar el título de la columna con respecto a su contenido */
+.footer-column.col-links-action h3 {
+    text-align: center;    /* Centra el texto del título */
+    width: 100%;           /* Asegura que tome todo el ancho disponible */
+    margin-bottom: 15px;   /* Espaciado elegante antes de los botones */
+}
+
+/* Asegurar que el contenedor de los botones también colabore con el centrado */
+.footer-action-buttons {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    gap: 10px;          /* Espacio entre los dos botones */
+    margin-top: 15px;
+    flex-wrap: nowrap;    /* Prohíbe terminantemente que se bajen */
+    width: 100%;        /* Ocupa todo el ancho de su columna */
+    justify-content: center; /* Centra los botones en caso de margen residual */
+}
+
+/* Estilo elegante para los botones horizontales */
+.footer-btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;     /* Quitamos padding lateral para que el width mande */
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px;     /* Reducido ligeramente a 11px para dar margen de seguridad en laptops chicas */
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    
+    /* Ambos medirán exactamente lo mismo */
+    width: 145px;        
+    box-sizing: border-box;
+    white-space: nowrap; /* Evita que el texto se parta en dos líneas */
+}
+
+/* Efecto Hover refinado */
+.footer-btn-action:hover {
+    background-color: #ffffff;
+    color: #C00000;      /* Cambia al rojo de Le Boulevard */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos dentro de los botones */
+.footer-btn-action i {
+    font-size: 13px;
+}
+
+/* Fondo de créditos final */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 30px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   AGREGADO: CENTRAR TEXTO AL FINAL (DERECHOS RESERVADOS)
+   ========================================================================== */
+.footer-bottom {
+    width: 100%;
+    text-align: center;  /* Centra el texto de CECA System */
+    margin-top: 25px;    /* Espacio elegante superior */
+    padding-top: 15px;
+}
+
+/* ==========================================================================
+   10.WIDGET DE WHATSAPP EJECUTIVO (LE BOULEVARD)
+   ========================================================================== */
+
+/* Contenedor flotante fijado a la esquina inferior derecha */
+.whatsapp-widget-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* El botón circular principal */
+.whatsapp-trigger-btn {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-trigger-btn:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+}
+
+/* Caja de chat desplegable */
+.whatsapp-chat-box {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Clase que activa JavaScript para mostrar la caja */
+.whatsapp-chat-box.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Encabezado elegante Verde WhatsApp Corporativo */
+.chat-box-header {
+    background-color: #075E54; /* Verde oficial de WhatsApp, serio y reconocible */
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Avatar circular rojo con iniciales */
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: transparent; /* Ya no necesita el fondo negro */
+    /* ... el resto de tu código de avatar se mantiene igual ... */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+    overflow: hidden; /* Esto obliga a la foto a recortarse perfectamente en círculo */
+}
+
+.chat-profile-info h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.chat-profile-info p {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    color: #25D366; /* Indicador verde de En Línea */
+}
+
+/* Botón de cerrar (X) */
+.chat-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.chat-close-btn:hover {
+    opacity: 1;
+}
+
+/* Cuerpo interno de la simulación del chat */
+.chat-box-body {
+    background-color: #F4F4F4;
+    padding: 20px;
+    min-height: 80px;
+}
+
+/* Burbuja blanca del mensaje recibido */
+.chat-message-bubble {
+    background-color: white;
+    padding: 12px 15px;
+    border-radius: 0px 12px 12px 12px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Pie de la caja donde se aloja el botón de acción */
+.chat-box-footer {
+    padding: 12px 15px;
+    background-color: white;
+    text-align: center;
+}
+
+/* Botón de acción verde para ir a WhatsApp */
+.chat-send-btn {
+    display: block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.chat-send-btn:hover {
+    background-color: #20ba5a;
+    transform: translateY(-1px);
+}
+
+.chat-send-btn i {
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   11. ANIMACIONES GLOBALES (KEYFRAMES)
+   ========================================================================== */
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   NUEVO: DISEÑO UNIFICADO DE ENCABEZADOS PREMIUM (LE BOULEVARD)
+   ========================================================================== */
+.section-header-premium {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+/* Títulos principales: Grandes, elegantes con serifa 'Playfair Display' */
+.header-titulo-principal {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+     color: #C00000; /* Negro suave editorial */
+    /*color: #1a1a1a; Negro suave editorial */
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+/* Subtítulos decorativos: Cursivas refinadas en el rojo de tu marca */
+.header-subtitulo-decorativo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #1A1A1A; /* Rojo/Borgoña corporativo */
+    /*color: #b30000;  Rojo/Borgoña corporativo */
+    margin: 0 0 14px 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Descripciones cortas: Texto limpio en 'Roboto' muy legible */
+.header-descripcion-corta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555555;
+    max-width: 650px;
+    margin: 0 auto 25px auto;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Línea divisoria minimalista e idéntica en toda la web */
+.header-linea-separadora {
+    width: 50px;
+    height: 2px;
+    background-color: #b30000;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   SECCIÓN GALERÍA FOTOGRÁFICA PREMIUM (REJILLA)
+   ========================================================================== */
+.galeria-eventos {
+    padding: 80px 40px;
+    background-color: #FFFFFF;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Arquitectura de Cuadrícula (Grid de 3 columnas como en tu ejemplo) */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Separación milimétrica limpia */
+}
+
+/* Elementos Individuales de la Galería */
+.galeria-item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden; /* Corta el desborde del zoom de la imagen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #F5F5F5;
+    aspect-ratio: 16 / 10; /* Mantiene la proporción horizontal corporativa */
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto al cuadro sin deformarla */
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Capa de texto flotante elegante en hover */
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.4); /* Capa oscura sutil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item-overlay span {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+/* Animaciones de interacción */
+.galeria-item:hover img {
+    transform: scale(1.06); /* Zoom fluido idéntico a las galerías premium */
+}
+
+.galeria-item:hover .item-overlay {
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+   ESTILOS PARA LA PÁGINA DE SERVICIOS (LE BOULEVARD CATERING)
+   ========================================================================== */
+
+/* Contenedor Principal en Flexbox para alinear la barra lateral y los productos */
+.catalogo-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+/* 1. BARRA LATERAL DE CATEGORÍAS (Elegante y Limpia) */
+.categorias-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.categorias-sidebar h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #b81c22; /* Tu rojo corporativo */
+    padding-bottom: 8px;
+}
+
+.categorias-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categorias-sidebar ul li {
+    margin-bottom: 8px;
+}
+
+.categorias-sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.categorias-sidebar ul li a i {
+    width: 20px;
+    text-align: center;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+/* Efectos Hover y Activo en Categorías */
+.categorias-sidebar ul li a:hover,
+.categorias-sidebar ul li a.active {
+    background: #fff5f5;
+    color: #b81c22;
+}
+
+.categorias-sidebar ul li a:hover i,
+.categorias-sidebar ul li a.active i {
+    color: #b81c22;
+}
+
+/* 2. CUADRÍCULA DE PRODUCTOS (GRID RESPONSIVE) */
+.productos-section {
+    flex-grow: 1;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta Premium de Artículo */
+.product-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    padding: 15px;
+    background: #fafafa;
+}
+
+.product-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.product-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #222;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.product-desc {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.product-price {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #b81c22;
+    margin-bottom: 12px;
+}
+
+.product-price small {
+    font-size: 12px;
+    color: #777;
+    font-weight: 400;
+}
+
+/* Botón Añadir a la Cotización */
+.btn-add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #b81c22;
+    color: #b81c22;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-add-to-cart:hover {
+    background: #b81c22;
+    color: #ffffff;
+}
+
+/* 3. COMPONENTES DEL CARRITO DESPLIEGUE LATERAL (Oculto por defecto) */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    display: none;
+    backdrop-filter: blur(3px); /* Desenfoque fino de fondo */
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px; /* Escondido fuera del canvas */
+    width: 400px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+    z-index: 2001;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Clase de activación manejada con JS */
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.close-cart:hover {
+    color: #b81c22;
+}
+
+.cart-items-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Elemento Individual del Carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+.cart-item-img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h4 {
+    font-size: 13px;
+    margin: 0 0 4px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.cart-item-qty {
+    font-size: 12px;
+    color: #666;
+    margin: 0 0 2px 0;
+}
+
+.cart-item-total {
+    font-size: 13px;
+    font-weight: 700;
+    color: #b81c22;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #bbb;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.remove-item-btn:hover {
+    color: #b81c22;
+}
+
+/* Footer del Carrito Fijo Inferior */
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+.cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.cart-subtotal strong {
+    font-size: 18px;
+    color: #b81c22;
+}
+
+.cart-notice {
+    font-size: 11px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.btn-view-cart,
+.btn-checkout {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-view-cart {
+    background: #ebeeef;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.btn-view-cart:hover {
+    background: #d8dcde;
+}
+
+.btn-checkout {
+    background: #b81c22;
+    color: #ffffff;
+}
+
+.btn-checkout:hover {
+    background: #961318;
+}
+
+/* RESPONSIVE DESIGN (Para celulares y tablets) */
+@media (max-width: 768px) {
+    .catalogo-container {
+        flex-direction: column;
+    }
+    .categorias-sidebar {
+        width: 100%;
+    }
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+
+/* ==========================================================================
+   EFECTO INTERCAMBIO DE IMAGEN PREMIUM (HOVER)
+   ========================================================================== */
+
+/* Contenedor relativo para posicionar las dos imágenes una sobre otra */
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Ajusta este valor según la altura actual de tus tarjetas */
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Reglas comunes de estiramiento y animación */
+.product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Evita que el menaje o cristalería se deforme */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Imagen base: visible al inicio */
+.product-image .img-default {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Imagen hover: oculta al inicio debajo de la base */
+.product-image .img-hover {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* --- Activación del efecto al pasar el cursor --- */
+.product-card:hover .product-image .img-default {
+    opacity: 0; /* Desvanece la principal */
+}
+
+.product-card:hover .product-image .img-hover {
+    opacity: 1; /* Muestra la secundaria */
+    transform: scale(1.03); /* Hace un zoom sutil muy elegante */
+}
+
+
+
+/* ==========================================================================
+   12. DISEÑO RESPONSIVO (CONSOLIDADO MAESTRO)
+   ========================================================================== */
+
+/* --- TABLETS Y CONTEXTOS MEDIANOS (Hasta 1024px) --- */
+@media (max-width: 1024px) {
+    .nosotros-container {
+        gap: 30px;
+    }
+    
+    .image-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-gallery img {
+        width: 45%;
+        max-width: 400px;
+    }
+    
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        flex: 1 1 40%;
+    }
+}
+
+/* --- DISPOSITIVOS MEDIANOS Y AJUSTES DE GRID (Hasta 900px) --- */
+@media (max-width: 900px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        gap: 15px;
+    }
+}
+
+/* --- AJUSTES DE BOTONES PARA DISPOSITIVOS TÁCTILES (Hasta 768px) --- */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+    /* Reglas adaptativas de encabezados unificados */
+    .header-titulo-principal {
+        font-size: 2.2rem;
+    }
+    .header-subtitulo-decorativo {
+        font-size: 1.1rem;
+    }
+    .header-descripcion-corta {
+        font-size: 0.95rem;
+    }
+}
+
+/* --- CELULARES Y DISPOSITIVOS MÓVILES (Hasta 600px) --- */
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+        text-align: center;
+    }
+    
+    .social-container {
+        align-items: center;
+    }
+
+    .contact-block {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nosotros-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .nosotros-text h1 {
+        text-align: center;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-gallery img {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .formulario-simple, .cotizador {
+        padding: 20px 15px;
+        margin: 20px 10px;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas móviles */
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Adaptación de la galería en teléfonos */
+    .galeria-eventos {
+        padding: 50px 20px;
+    }
+    .galeria-grid {
+        grid-template-columns: 1fr; /* 1 sola columna en celulares para apreciar el detalle */
+        gap: 15px;
+    }
+}
+
+/* --- PANTALLAS DE ESCRITORIO GRANDES (Desde 1025px en adelante) --- */
+@media (min-width: 1025px) {
+    .image-gallery {
+        flex-direction: row;
+    }
+
+    .image-gallery img {
+        width: 300px;
+    }
+}

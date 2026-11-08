@@ -1,0 +1,10 @@
+# Dependencias y entornos
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de editores
+.vscode/
+
+# Logs
+*.log

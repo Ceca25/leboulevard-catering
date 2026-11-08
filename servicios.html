@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Le Boulevard Catering</title>
+    <!-- CSS Unificado (Asegúrate de que la carpeta coincida si usas mayúsculas/minúsculas 'CSS' o 'css') -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Tipografías Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Iconos Gratuitos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Contenedor dinámico donde JavaScript inyectará el Header y el Menú Global -->
+    <div id="header"></div>
+
+    <main>
+    <!-- CONTENEDOR PRINCIPAL DEL CATÁLOGO -->
+    <div class="catalogo-container">
+      
+      <!-- BARRA LATERAL IZQUIERDA: CATEGORÍAS -->
+      <aside class="categorias-sidebar">
+        <h3>Categorías</h3>
+        <ul class="category-menu">
+          <li ><a href="#decoracion" class="active"><i class="fas fa-magic"></i> Decoración</a></li>
+          <li><a href="#menaje"><i class="fas fa-utensils"></i> Menaje</a></li>
+          <li><a href="#cuberterias"><i class="fas fa-cutlery"></i> Cuberterías</a></li>
+          <li><a href="#cristaleria"><i class="fas fa-glass-martini-alt"></i> Cristalería</a></li>
+          <li><a href="#estaciones-cafe"><i class="fas fa-coffee"></i> Estaciones de Café</a></li>
+          <li><a href="#equipos-parrilla"><i class="fas fa-fire"></i> Equipos de Parrilla</a></li>
+          <li><a href="#mobiliario"><i class="fas fa-chair"></i> Mobiliario</a></li>
+          <li><a href="#manteleria"><i class="fas fa-scroll"></i> Mantelería</a></li>
+          <li><a href="#personal-eventos"><i class="fas fa-users"></i> Personal - Eventos</a></li>
+        </ul>
+      </aside>
+
+      <!-- CUADRÍCULA DE PRODUCTOS (DERECHA) -->
+      <section class="productos-section">
+        <div class="product-grid" id="productGrid">
+          
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: DECORACIÓN -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image">
+              <img src="img/servicios/Decoracion/candelabrossin.webp" alt="CANDELABROS">
+              <img src="img/servicios/Decoracion/candelabros.webp" alt="CANDELABROS" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>CANDELABRO</h3>
+              <p class="product-desc">CandelabroS de madera blanco 21cm   15cm - 10cm.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/servicios/Decoracion/cajadecorativa.webp" alt="CAJA DECORATIVA"></div>
+            <div class="product-info">
+              <h3>CAJA DECORATIVA</h3>
+              <p class="product-desc">Caja decorativa chica</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image">
+              <img src="img/servicios/Decoracion/farol.webp" alt="FAROL">
+              <img src="img/servicios/Decoracion/farolc.webp" alt="FAROL" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>FAROL</h3>
+              <p class="product-desc">Farol de plástico 13.5*13.5*34 cm - My Home.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image">
+              <img src="img/servicios/Decoracion" alt="FLORERO">
+              <img src="img/servicios/Decoracion" alt="LETRERO LOVE" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>FLORERO</h3>
+              <p class="product-desc">Florero tubo transparente 12.5 cm.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/decoracion/jarrones-loza.jpg" alt="JARRONES LOZA"></div>
+            <div class="product-info">
+              <h3>JARRONES LOZA</h3>
+              <p class="product-desc">Jarrones de loza blancos.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image">
+              <img src="img/servicios/Decoracion/letrerolove.webp" alt="LETRERO LOVE">
+              <img src="img/servicios/Decoracion/letrerolovec.webp" alt="LETRERO LOVE" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>LETRERO LOVE</h3>
+              <p class="product-desc">LOVE - Letrero de plástico a pilas.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/decoracion/letrero-neon.jpg" alt="LETRERO NEON"></div>
+            <div class="product-info">
+              <h3>LETRERO NEON</h3>
+              <p class="product-desc">Mi Boda - Letrero de neón.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/decoracion/mesa-plastica.jpg" alt="ALTURAS"></div>
+            <div class="product-info">
+              <h3>ALTURAS</h3>
+              <p class="product-desc">Mesa plástica blanca de adorno.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/decoracion/porta-bocadito.jpg" alt="PORTA BOCADITO"></div>
+            <div class="product-info">
+              <h3>PORTA BOCADITO</h3>
+              <p class="product-desc">Cerámica blanca soporte plateado.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image">
+              <img src="img/servicios/Decoracion/velas5.jpg" alt="VELA PLASTICA">
+              <img src="img/servicios/Decoracion/letrerolovec.webp" alt="VELA PLASTICA" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>VELA PLASTICA</h3>
+              <p class="product-desc">Vela plástica crema con luz LED a pila 155mm.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/decoracion/vela-plastica.jpg" alt="VELA PLASTICA"></div>
+            <div class="product-info">
+              <h3>VELA PLASTICA</h3>
+              <p class="product-desc">Vela plástica crema con luz LED a pila.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/decoracion/vela-plastica.jpg" alt="VELA PLASTICA"></div>
+            <div class="product-info">
+              <h3>VELA PLASTICA</h3>
+              <p class="product-desc">Vela plástica crema con luz LED a pila.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="decoracion">
+            <div class="product-image"><img src="img/servicios/Decoracion/pizarraled.webp" alt="PIZARRA LED"></div>
+            <div class="product-info">
+              <h3>PIZARRA LED</h3>
+              <p class="product-desc">Pizarra led para eventos.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: MENAJE -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="menaje" style="display: none;">
+            <div class="product-image"><img src="img/menaje/plato-ent-8.jpg" alt="PLATO DE ENT."></div>
+            <div class="product-info">
+              <h3>PLATO DE ENT.</h3>
+              <p class="product-desc">Plato Blanco No. 8 - Ichimatsu.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="menaje" style="display: none;">
+            <div class="product-image"><img src="img/menaje/plato-sitio-gold.jpg" alt="PLATO DE SITIO"></div>
+            <div class="product-info">
+              <h3>PLATO DE SITIO</h3>
+              <p class="product-desc">PDS Redondo, Plástico, Dorado DC 32 cm.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="menaje" style="display: none;">
+            <div class="product-image"><img src="img/menaje/platon-loza.jpg" alt="PLATON DE LOZA"></div>
+            <div class="product-info">
+              <h3>PLATON DE LOZA</h3>
+              <p class="product-desc">Platón Blanco No. 10.5 - My Home.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: CUBERTERÍAS -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="cuberterias" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cuberteria/cuchara.webp" alt="CUCHARAS"></div>
+            <div class="product-info">
+              <h3>CUCHARAS</h3>
+              <p class="product-desc">Cuchara Hotelero Modelo 510 Facusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cuberterias" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cuberteria/cucharita.webp" alt="CUCHARITAS"></div>
+            <div class="product-info">
+              <h3>CUCHIRITAS</h3>
+              <p class="product-desc">Cucharita Hotelero Modelo 510 Facusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cuberterias" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cuberteria/tenedor.webp" alt="TENEDORES"></div>
+            <div class="product-info">
+              <h3>TENEDORES</h3>
+              <p class="product-desc">Tenedor Hotelero Modelo 510 Facusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cuberterias" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cuberteria/cuchillo.webp" alt="CUCHILLOS"></div>
+            <div class="product-info">
+              <h3>CUCHILLOS</h3>
+              <p class="product-desc">Cuchillos Hotelero Modelo 510 Facusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: CRISTALERÍA -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="cristaleria" style="display: block;">
+            <div class="product-image">
+              <img src="img/servicios/Cristaleria/copabalon7948.webp" alt="COPA BALON/GIN">
+              <img src="img/servicios/Cristaleria/copabalonc.webp" alt="COPA BALON/GIN EN USO" class="img-hover">
+            </div>  
+            <div class="product-info">
+              <h3>COPA BALON/GIN</h3>
+              <p class="product-desc">Copa Balón / Gin 600 ML – Nadir.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image">
+              <img src="img/servicios/Cristaleria/copachampagne5436.webp" alt="COPA CHAMPAGNE">
+              <img src="img/servicios/Cristaleria/copachampagnec.webp" alt="COPA CHAMPAGNE" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>COPA CHAMPAGNE</h3>
+              <p class="product-desc">Copa Lex. Champagne Aragon 6 oz. – Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image">
+              <img src="img/servicios/Cristaleria/copacocktail0505.webp" alt="COPA COCKTAIL">
+              <img src="img/servicios/Cristaleria/copacoctelc.webp" alt="COPA COCKTAIL" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>COPA COCKTAIL</h3>
+              <p class="product-desc">Copa Lex. de Cocktail - Vino 4.5 oz – Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image">
+              <img src="img/servicios/Cristaleria/copacoupe7o48.webp" alt="COPA COUPE">
+              <img src="img/servicios/Cristaleria/copacoupec7048.webp" alt="COPA COCKTAIL" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>COPA COUPE</h3>
+              <p class="product-desc">Copa Coupe grande 11.5 oz / 340ml Nadir.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image">
+              <img src="img/servicios/Cristaleria/copamartini5442.webp" alt="COPA MARTINI">
+              <img src="img/servicios/Cristaleria/copamartinic.webp" alt="COPA COCKTAIL" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>COPA MARTINI</h3>
+              <p class="product-desc">Copa Av. Lisa Martini 9.5 oz.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image">
+              <img src="img/servicios/Cristaleria/copahuracan7928.webp" alt="COPA HURACAN">
+              <img src="img/servicios/Cristaleria/copahuracanc.webp" alt="COPA COCKTAIL" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>COPA PERA</h3>
+              <p class="product-desc">Copa Huracán Windsor 12.85 oz. - Nadir.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/copa premier4740.webp" alt="COPA PREMIER"></div>
+            <div class="product-info">
+              <h3>COPA PREMIER</h3>
+              <p class="product-desc">Copa Premier Gran Vino.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/copavino5434.webp" alt="COPA VINO"></div>
+            <div class="product-info">
+              <h3>COPA VINO</h3>
+              <p class="product-desc">Copa Lex. de Vino Aragon 10 oz. - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/hieleraroyal.webp" alt="HIELERA ROYAL"></div>
+            <div class="product-info">
+              <h3>HIELERA ROYAL</h3>
+              <p class="product-desc">Hielera Royal Av. Lisa vidrio - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/jarra13.webp" alt="JARRAS"></div>
+            <div class="product-info">
+              <h3>JARRAS</h3>
+              <p class="product-desc">Jarra de 1.3L vidrio J/C - Iumusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasococtel0380.webp" alt="VASO COCKTAIL"></div>
+            <div class="product-info">
+              <h3>VASO COCKTAIL</h3>
+              <p class="product-desc">Vaso Ilhabela Cocktail 6 oz. ML - Nadir.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasodubai0728.webp" alt="VASO DUBAI"></div>
+            <div class="product-info">
+              <h3>VASO DUBAI</h3>
+              <p class="product-desc">Vaso Liso de 12 oz - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasoflauta509.webp" alt="VASO FLAUTA C."></div>
+            <div class="product-info">
+              <h3>VASO FLAUTA C.</h3>
+              <p class="product-desc">Vaso Lex. Flauta Cervecero 509 - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasohighball0022.webp" alt="VASO HIGHBALL"></div>
+            <div class="product-info">
+              <h3>VASO HIGHBALL</h3>
+              <p class="product-desc">Vaso Lex. Highball 334ml - 11.25 oz - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasokero0380.webp" alt="VASO KERO"></div>
+            <div class="product-info">
+              <h3>VASO KERO</h3>
+              <p class="product-desc">Vaso Liso de 11.5 oz - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasolisboa0648.webp" alt="VASO LISBOA"></div>
+            <div class="product-info">
+              <h3>VASO LISBOA</h3>
+              <p class="product-desc">Vaso Lisboa Té Helado 22 oz - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasomultiusos0044.webp" alt="VASO MULTIUSOS"></div>
+            <div class="product-info">
+              <h3>VASO MULTIUSOS</h3>
+              <p class="product-desc">Vaso Lex. Multiusos 8 oz. - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="cristaleria" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Cristaleria/vasowhisky0045.webp" alt="VASO WHISKY"></div>
+            <div class="product-info">
+              <h3>VASO WHISKY</h3>
+              <p class="product-desc">Vaso Lex. Whisky 10.5 oz - Cristar.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: EQUIPOS DE PARRILLA -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="equipos-parrilla" style="display: none;">
+            <div class="product-image"><img src="img/servicios/EquiposDParrilla/cajachina.webp" alt="CAJA CHINA"></div>
+            <div class="product-info">
+              <h3>CAJA CHINA</h3>
+              <p class="product-desc">Medidas 81*44*70 cm - Capacidad de 10K a 15K.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="equipos-parrilla" style="display: none;">
+            <div class="product-image"><img src="img/servicios/EquiposDParrilla/cilindro.webp" alt="CILINDRO"></div>
+            <div class="product-info">
+              <h3>CILINDRO</h3>
+              <p class="product-desc">Cilindro Ahumador Parrillero Premium.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="equipos-parrilla" style="display: none;">
+            <div class="product-image"><img src="img/servicios/EquiposDParrilla/parrilla.webp" alt="PARRILLA"></div>
+            <div class="product-info">
+              <h3>PARRILLA</h3>
+              <p class="product-desc">Parrilla Premium.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+
+
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: ESTACION DE CAFE -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="estaciones-cafe" style="display: none;">
+            <div class="product-image"><img src="img/servicios/EstacionDeCafe/cafetereraelectrica.webp" alt="CAFETERA ELECTRICA"></div>
+            <div class="product-info">
+              <h3>CAFETERA ELECTRICA</h3>
+              <p class="product-desc">Cafetera Electica de 16 litros - Ichimatsu.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="estaciones-cafe" style="display: none;">
+            <div class="product-image"><img src="img/servicios/EstacionDeCafe/thermo0.webp" alt="THERMOS STAINLESS"></div>
+            <div class="product-info">
+              <h3>THERMO STAINLESS</h3>
+              <p class="product-desc">PDS Redondo, Plástico, Dorado DC 32 cm.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="estaciones-cafe" style="display: none;">
+            <div class="product-image"><img src="img/servicios/EstacionDeCafe/thermo2.webp" alt="THERMOS SIFON"></div>
+            <div class="product-info">
+              <h3>THERMOS SIFON</h3>
+              <p class="product-desc">Platón Blanco No. 10.5 - My Home.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="estaciones-cafe" style="display: none;">
+            <div class="product-image"><img src="img/servicios/EstacionDeCafe/dispensador.webp" alt="DISPENSADOR"></div>
+            <div class="product-info">
+              <h3>DISPENSADOR</h3>
+              <p class="product-desc">Platón Blanco No. 10.5 - My Home.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: MOBILIARIO -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="mobiliario" style="display: none;">
+            <div class="product-image">
+              <img src="img/servicios/Mobiliario/mesawash2.webp" alt="MESA WASH">
+              <img src="img/servicios/M+
+              obiliario/mesawashc2.webp" alt="MESA WASH" class="img-hover">
+            </div>
+            <div class="product-info">
+              <h3>MESA WASH</h3>
+              <p class="product-desc">Mesa de wash color marrón 2 unidades.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="mobiliario" style="display: none;">
+            <div class="product-image"><img src="img/servicios/Mobiliario/mesaplegable.webp" alt="MESA PLEGABLE"></div>
+            <div class="product-info">
+              <h3>MESA PEGABLE</h3>
+              <p class="product-desc">Mesa Plegable 180CMx75CMx74CM - BLANCO.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+          
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: MANTELERIA -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="manteleria" style="display: none;">
+            <div class="product-image"><img src="img/cuberteria/cuchara-510.jpg" alt="CUCHARAS"></div>
+            <div class="product-info">
+              <h3>CUCHARAS</h3>
+              <p class="product-desc">Cuchara Hotelero Modelo 510 Facusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="manteleria" style="display: none;">
+            <div class="product-image"><img src="img/cuberteria/cuchara-730.jpg" alt="CUCHARAS MESA"></div>
+            <div class="product-info">
+              <h3>CUCHARAS MESA</h3>
+              <p class="product-desc">Cuchara Mesa Estrella Mod. 730 Facusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="manteleria" style="display: none;">
+            <div class="product-image"><img src="img/cuberteria/cucharita-loza.jpg" alt="CUCHARITA LOZA"></div>
+            <div class="product-info">
+              <h3>CUCHARITA LOZA</h3>
+              <p class="product-desc">Loza Cucharita Bl 11*11*2 cm JY7116.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="manteleria" style="display: none;">
+            <div class="product-image"><img src="img/cuberteria/cuchillos.jpg" alt="CUCHILLOS"></div>
+            <div class="product-info">
+              <h3>CUCHILLOS</h3>
+              <p class="product-desc">Cuchillos de Mesa Facusa.</p>
+              <span class="product-price">S/. 0.00 <small>/ und</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- CATEGORÍA: PERSONAL - EVENTOS -->
+          <!-- ========================================== -->
+          <div class="product-card" data-category="personal-eventos" style="display: none;">
+            <div class="product-image"><img src="img/servicios/PersonalEvento/barman.webp" alt="BARTENDER"></div>
+            <div class="product-info">
+              <h3>BARTENDER</h3>
+              <p class="product-desc">Servicio de tragos y coctelería 5H.</p>
+              <span class="product-price">S/. 0.00 <small>/ serv</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="personal-eventos" style="display: none;">
+            <div class="product-image"><img src="img/servicios/PersonalEvento/mozos.webp" alt="MOZOS"></div>
+            <div class="product-info">
+              <h3>MOZOS</h3>
+              <p class="product-desc">Personal para atención integral 5H.</p>
+              <span class="product-price">S/. 0.00 <small>/ serv</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="personal-eventos" style="display: none;">
+            <div class="product-image"><img src="img/servicios/PersonalEvento/ayudantecocina.webp" alt="Ayudante de Cocina"></div>
+            <div class="product-info">
+              <h3>AYUDANTE DE COCINA</h3>
+              <p class="product-desc">Personal para servir la comida 5H.</p>
+              <span class="product-price">S/. 0.00 <small>/ serv</small></span>
+              <button class="btn-add-to-cart" onclick="openCart()"><i class="fas fa-plus"></i> Añadir</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- COMPONENTES DEL CARRITO LATERAL -->
+    <!-- ========================================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h2><i class="fas fa-shopping-bag"></i> Mi Cotización</h2>
+        <button class="close-cart" id="closeCartBtn">&times;</button>
+      </div>
+
+      <div class="cart-items-container">
+        <!-- Los ítems agregados aparecerán dinámicamente aquí -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-subtotal">
+          <span>Subtotal:</span>
+          <strong>S/. 0.00</strong>
+        </div>
+        <p class="cart-notice">Los costos de transporte y personal se calculan al finalizar.</p>
+        <button class="btn-view-cart">Ver Lista Completa</button>
+        <button class="btn-checkout">Enviar a WhatsApp</button>
+      </div>
+    </div>
+  </main>
+      <!-- Footer fijo del carrito con totales -->
+      <div class="cart-footer">
+        <div class="cart-subtotal">
+          <span>Subtotal:</span>
+          <strong>S/. 90.00</strong>
+        </div>
+        <p class="cart-notice">Los costos de transporte y personal se calculan al finalizar.</p>
+        <button class="btn-view-cart">Ver Lista Completa</button>
+        <button class="btn-checkout">Enviar a WhatsApp</button>
+      </div>
+    </div>
+  </main>
+
+    <!-- Contenedor dinámico donde JavaScript inyectará el Footer de la marca -->
+    <div id="footer"></div>
+
+    <!-- Script Maestro encargado de cargar de forma asíncrona los componentes comunes -->
+    <script src="js/include.js"></script>
+
+</body>
+</html>

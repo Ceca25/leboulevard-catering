@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Le Boulevard Catering</title>
+    <!-- CSS Unificado (Asegúrate de que la carpeta coincida si usas mayúsculas/minúsculas 'CSS' o 'css') -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Tipografías Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Iconos Gratuitos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+<body>
+
+    <!-- Contenedor dinámico donde JavaScript inyectará el Header y el Menú Global -->
+    <div id="header"></div>
+
+    <main>
+        <section class="hero">
+            <!-- Galería Dinámica de Fondos (Actúa como fondo visual de la portada) -->
+            <div class="image-gallery">
+                <img src="img/inicio/menaje-evento-01.webp" alt="Decoración de eventos Le Boulevard">
+                <img src="img/inicio/coffee-break.webp" alt="Servicio de Coffee Break">
+                <img src="img/inicio/cristaleria.webp" alt="Cristalería y Menaje Fino">
+                <img src="img/inicio/caja-china-01.webp" alt="Servicio de Caja China y Banquetes">
+            </div>
+
+            <!-- Capa de Texto Central Premium (Superpuesta por encima de las fotos gracias al CSS con z-index) -->
+            <div class="hero-content">
+                <h1>Elegancia y calidad para tus eventos</h1>
+                <p>Ofrecemos alquiler de menaje, cristalería y servicios para tus celebraciones.</p>
+                <!-- Redirección directa al nuevo cotizador interactivo en línea -->
+                <a href="contactos.html" class="cta"><i class="fas fa-calendar-check"></i> Cotiza tu evento</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contenedor dinámico donde JavaScript inyectará el Footer de la marca -->
+    <div id="footer"></div>
+
+    <!-- Script Maestro encargado de cargar de forma asíncrona los componentes comunes -->
+    <script src="js/include.js"></script>
+    
+</body>
+</html>

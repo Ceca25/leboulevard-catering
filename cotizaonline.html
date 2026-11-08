@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Le Boulevard Catering</title>
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Iconos de Font Awesome v6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         ENCABEZADO (HEADER)
+         ========================================== -->
+    <header>
+        <!-- Barra Superior (Top Bar Premium) -->
+        <div class="top-bar">
+            <div class="logo-container"> 
+                <img src="img/leboulevardcat00.png" alt="LeBoulevard Catering" class="logo">
+            </div>
+            <div class="social-container">
+                <!-- Bloque de Contacto Unificado -->
+                
+                    <a href="https://wa.me/51924668399" target="_blank" class="contact-line item-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> <span>+51 924 668 399</span>
+                    </a>
+                    
+                
+                
+                <!-- Ubicación Corporativa -->
+                <div class="contact-line item-location">
+                    <i class="fa-solid fa-location-dot"></i> <span>Trujillo, La Libertad, Perú</span>
+                </div>
+                
+                <!-- Redes Sociales de Cabecera (Sincronizadas) -->
+                <div class="top-social-icons">
+                    <a href="https://facebook.com/leboulevardcatering" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/leboulevardcatering" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/LeboulevardCat" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@leboulevardcatering" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de Navegación Sticky -->
+        <nav class="menu-bar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL (MAIN)
+         ========================================== -->
+    <main style="padding: 40px 20px; background-color: #FAFAFA;">
+
+        <!-- SECCIÓN: Cotizador dinámico interactivo -->
+        <section id="cotizador" class="cotizador">
+            <h2>📦 Cotiza tu evento en línea</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 25px;">Selecciona tus opciones y obtén un presupuesto estimado al instante de forma automática.</p>
+            
+            <form id="cotizador-form">
+                <label for="evento">Tipo de evento</label>
+                <select id="evento" name="evento">
+                    <option value="boda">Boda</option>
+                    <option value="cumpleaños">Cumpleaños</option>
+                    <option value="corporativo">Evento corporativo</option>
+                    <option value="familiar">Reunión familiar</option>
+                </select>
+
+                <label for="invitados">Cantidad de invitados</label>
+                <input type="number" id="invitados" name="invitados" min="10" placeholder="Mínimo 10 personas" required>
+
+                <fieldset class="servicios-grid">
+                    <legend>Servicios requeridos</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="servicios" value="menaje" data-precio="15"> 🍽 Menaje</label>
+                        <label><input type="checkbox" name="servicios" value="cristaleria" data-precio="10"> 🥂 Cristalería</label>
+                        <label><input type="checkbox" name="servicios" value="grill" data-precio="35"> 🍖 Grill / Parrilla</label>
+                        <label><input type="checkbox" name="servicios" value="coffee" data-precio="20"> ☕ Coffee Break</label>
+                        <label><input type="checkbox" name="servicios" value="lenceria" data-precio="8"> 🧵 Lencería (Manteles)</label>
+                        <label><input type="checkbox" name="servicios" value="mobiliario" data-precio="25"> 🪑 Mobiliario (Sillas/Mesas)</label>
+                        <label><input type="checkbox" name="servicios" value="barman" data-precio="150" data-fijo="true"> 🍸 Barman (Servicio Fijo)</label>
+                        <label><input type="checkbox" name="servicios" value="mozos" data-precio="120" data-fijo="true"> 👔 Mozos (Servicio Fijo)</label>
+                    </div>
+                </fieldset>
+
+                <!-- Recuadro Dinámico de Resultados -->
+                <div id="resultado" class="resultado-box" style="display: none;">
+                    <div class="resultado-item">Precio base estimado por persona: <span id="res-base">S/ 0.00</span></div>
+                    <div class="resultado-item">Adicionales seleccionados: <span id="res-adicionales">S/ 0.00</span></div>
+                    <div class="resultado-total">Total Estimado: <span id="res-total">S/ 0.00</span></div>
+                    <small>*Este monto es una estimación referencial sujeta a disponibilidad de fechas.</small>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit" class="btn-cotizador">
+                    <i class="fa-solid fa-calculator"></i> Solicitar cotización detallada
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    
+    <!-- ==========================================
+         PIE DE PÁGINA (FOOTER CORPORATIVO)
+         ========================================== -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <!-- Columna 1: Imagen del Libro de Reclamaciones / Notas -->
+            <div class="footer-column col-logo">
+                <img src="img/libro.png" alt="Notebook" class="footer-book-img">
+            </div>
+            
+            <!-- Columna 2: Redes Sociales -->
+            <div class="footer-column">
+                <h3>SÍGUENOS</h3>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com/leboulevardcatering" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/leboulevardcatering" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/LeboulevardCat" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@leboulevardcatering" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                
+            </div>
+            
+            <!-- Columna 3: Información de Alquiler Seguro y Contacto -->
+            <div class="footer-column">
+                <h3>ALQUILER SEGURO</h3>
+                <p>Puedes alquilar con total confianza, realizar tu evento con normal confianza.</p>
+                <p class="footer-email-text"><i class="fa-solid fa-envelope"></i> informes@leboulevardcatering.com</p>
+            </div>
+            
+            <!-- Columna 4: Registro / CTA -->
+            <div class="footer-column">
+                <h3>¡ÚNETE A NOSOTROS!</h3>
+                <a href="#" class="footer-btn-register">
+                    <i class="fa-solid fa-user"></i> REGISTRARSE
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Franja Inferior de Derechos Reservados -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 CECA System. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         BOTÓN FLOTANTE DE WHATSAPP GLOBAL
+         ========================================== -->
+    <a href="https://wa.me/51924668399" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Cotiza por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+
+    <!-- ==========================================
+         LÓGICA JAVASCRIPT DEL COTIZADOR
+         ========================================== -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('cotizador-form');
+        const eventoSelect = document.getElementById('evento');
+        const invitadosInput = document.getElementById('invitados');
+        const checkboxes = document.querySelectorAll('input[name="servicios"]');
+        
+        const resultadoBox = document.getElementById('resultado');
+        const resBase = document.getElementById('res-base');
+        const resAdicionales = document.getElementById('res-adicionales');
+        const resTotal = document.getElementById('res-total');
+
+        // Precios base referenciales por tipo de evento (por invitado)
+        const preciosBaseEvento = {
+            boda: 50,
+            cumpleaños: 30,
+            corporativo: 45,
+            familiar: 25
+        };
+
+        function calcularCotizacion() {
+            const cantidad = parseInt(invitadosInput.value);
+            if (isNaN(cantidad) || cantidad < 1) {
+                resultadoBox.style.display = 'none';
+                return;
+            }
+
+            const tipoEvento = eventoSelect.value;
+            const costoBasePersona = preciosBaseEvento[tipoEvento] || 0;
+            let subtotalAdicionales = 0;
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const precio = parseFloat(cb.getAttribute('data-precio')) || 0;
+                    const esFijo = cb.getAttribute('data-fijo') === 'true';
+                    
+                    if (esFijo) {
+                        subtotalAdicionales += precio; // Costo único
+                    } else {
+                        subtotalAdicionales += (precio * cantidad); // Costo por persona
+                    }
+                }
+            });
+
+            const totalGeneral = (costoBasePersona * cantidad) + subtotalAdicionales;
+
+            // Renderizar datos calculados
+            resBase.textContent = `S/ ${(costoBasePersona * cantidad).toFixed(2)}`;
+            resAdicionales.textContent = `S/ ${subtotalAdicionales.toFixed(2)}`;
+            resTotal.textContent = `S/ ${totalGeneral.toFixed(2)}`;
+            resultadoBox.style.display = 'block';
+        }
+
+        // Eventos en tiempo real para disparar el cálculo automático
+        eventoSelect.addEventListener('change', calcularCotizacion);
+        invitadosInput.addEventListener('input', calcularCotizacion);
+        checkboxes.forEach(cb => cb.addEventListener('change', calcularCotizacion));
+
+        // Enviar cotización estructurada directamente a tu WhatsApp Business
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const cantidad = invitadosInput.value;
+            const tipoEvento = eventoSelect.options[eventoSelect.selectedIndex].text;
+            
+            let serviciosSeleccionados = [];
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    serviciosSeleccionados.push(cb.parentNode.textContent.trim());
+                }
+            });
+
+            const serviciosTexto = serviciosSeleccionados.length > 0 
+                ? serviciosSeleccionados.join(', ') 
+                : 'Ninguno en específico';
+
+            const totalEstimado = resTotal.textContent;
+
+            const nroWhatsApp = "51924668399";
+            const textoMensaje = `¡Hola Le Boulevard Catering! ✨\n\n` +
+                                 `Me gustaría solicitar una cotización detallada con los siguientes datos:\n\n` +
+                                 `• *Tipo de Evento:* ${tipoEvento}\n` +
+                                 `• *Nro. de Invitados:* ${cantidad} personas\n` +
+                                 `• *Servicios seleccionados:* ${serviciosTexto}\n` +
+                                 `• *Estimado preliminar:* ${totalEstimado}\n\n` +
+                                 `Quedo atento a su respuesta para validar disponibilidad de fecha. ¡Gracias!`;
+
+            const urlEncoded = encodeURIComponent(textoMensaje);
+            window.open(`https://wa.me/${nroWhatsApp}?text=${urlEncoded}`, '_blank');
+        });
+    });
+    </script>
+</body>
+</html>
