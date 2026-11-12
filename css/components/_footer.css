@@ -1,0 +1,156 @@
+/* ==========================================================
+   LE BOULEVARD — Pie de Página (Footer) Optimizado y Limpio
+   ========================================================== */
+
+.main-footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 50px 0 20px 0;
+    font-family: var(--fuente-base);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Columna 1: Logo controlado (Idéntico comportamiento al Header) */
+.footer-column.col-logo {
+    flex: 0 0 240px !important;
+    max-width: 240px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+
+.footer-brand-logo {
+    width: 210px !important;            /* Ancho grande y directo */
+    height: auto !important;            /* Proporción automática */
+    max-height: 90px !important;        /* Altura máxima generosa para que luzca grande */
+    object-fit: contain !important;
+    filter: brightness(0) invert(1) !important; /* Blanco nítido */
+    display: block !important;
+    margin: 0 !important;
+}
+
+/* Columna 2: Títulos y textos */
+.footer-column h3 {
+    font-family: var(--fuente-base);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-blanco);
+    margin: 0 0 15px 0;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.footer-info-item {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 8px 0;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-info-item i {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Columna 3: Redes Sociales CUADRADAS (Idénticas al Header) */
+.footer-column.col-social {
+    align-items: flex-start;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.footer-social-icons a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px; /* Cuadrado con esquinas ligeramente redondeadas como el header */
+    color: var(--color-blanco);
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-icons a:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    border-color: var(--color-blanco);
+    transform: translateY(-3px);
+}
+
+/* Columna 4: Alquiler Seguro y Libro de Reclamaciones */
+.footer-column.col-seguro {
+    align-items: flex-start;
+}
+
+.footer-seguro-text {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 12px 0;
+    font-weight: 300;
+}
+
+.footer-book-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-book-img {
+    height: auto;
+    width: 75px;
+    opacity: 0.95;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-book-img:hover {
+    transform: scale(1.06);
+    opacity: 1;
+}
+
+/* Barra inferior de derechos */
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 35px;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}

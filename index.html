@@ -13,32 +13,73 @@
 
 
 </head>
-<body>
+<body class="page-inicio">
 
-    <!-- Contenedor dinámico donde JavaScript inyectará el Header y el Menú Global -->
+    <!-- Header dinámico -->
     <div id="header"></div>
 
     <main>
+        <!-- SECCIÓN 1: HERO CON CARRUSEL DE 5 IMÁGENES -->
         <section class="hero">
-            <!-- Galería Dinámica de Fondos (Actúa como fondo visual de la portada) -->
-            <div class="image-gallery">
-                <img src="img/inicio/menaje-evento-01.webp" alt="Decoración de eventos Le Boulevard">
-                <img src="img/inicio/coffee-break.webp" alt="Servicio de Coffee Break">
-                <img src="img/inicio/cristaleria.webp" alt="Cristalería y Menaje Fino">
-                <img src="img/inicio/caja-china-01.webp" alt="Servicio de Caja China y Banquetes">
+            <!-- Carrusel de 5 imágenes de fondo -->
+            <div class="hero-carousel">
+                <img src="img/inicio/menaje123.jpeg" alt="Le Boulevard 1" class="active">
+                <img src="img/inicio/cofe break.jpeg" alt="Le Boulevard 2">
+                <img src="img/inicio/menaje5756.jpeg" alt="Le Boulevard 3">
+                <img src="img/inicio/cofee1.jpeg" alt="Le Boulevard 4">
+                <img src="img/inicio/menaje986.jpeg" alt="Le Boulevard 5">
             </div>
 
-            <!-- Capa de Texto Central Premium (Superpuesta por encima de las fotos gracias al CSS con z-index) -->
+            <!-- Contenido del Hero -->
             <div class="hero-content">
                 <h1>Elegancia y calidad para tus eventos</h1>
                 <p>Ofrecemos alquiler de menaje, cristalería y servicios para tus celebraciones.</p>
-                <!-- Redirección directa al nuevo cotizador interactivo en línea -->
                 <a href="contactos.html" class="cta"><i class="fas fa-calendar-check"></i> Cotiza tu evento</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TARJETAS INTERACTIVAS CON ICONO A LA IZQUIERDA -->
+        <section class="steps-section">
+            <div class="steps-container">
+                
+                <!-- Tarjeta 1: Cotización Online -->
+                <a href="contactos.html" class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cotización ONLINE</h3>
+                        <p>Navega nuestros servicios y obten tu cotización</p>
+                    </div>
+                </a>
+
+                <!-- Tarjeta 2: Amplio Stock -->
+                <a href="servicios.html" class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Amplio Stock</h3>
+                        <p>Cubrimos grandes eventos con responsabilidad</p>
+                    </div>
+                </a>
+
+                <!-- Tarjeta 3: Bajo Precio -->
+                <a href="servicios.html" class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bajo Precio</h3>
+                        <p>Tenemos excelentes y competitivos precios</p>
+                    </div>
+                </a>
+
             </div>
         </section>
     </main>
 
-    <!-- Contenedor dinámico donde JavaScript inyectará el Footer de la marca -->
+    <!-- Footer dinámico -->
     <div id="footer"></div>
 
     <!-- Script Maestro encargado de cargar de forma asíncrona los componentes comunes -->

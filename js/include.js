@@ -1,12 +1,30 @@
 // 1. Cargar el Header y ejecutar la marcación de ruta SOLO cuando termine de cargar
 fetch("partials/header.html")
-  .then(res => res.text())
-  .then(data => {
-      document.getElementById("header").innerHTML = data;
-      // ¡Paso clave! Ejecutamos la función justo aquí, cuando los enlaces ya existen en el HTML
-      marcarRutaActiva(); 
-  })
-  .catch(err => console.error("Error al cargar el header:", err));
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("header").innerHTML = data;
+        
+        // Función de ruta activa (si la tienes)
+        if (typeof marcarRutaActiva === 'function') {
+            marcarRutaActiva();
+        }
+    })
+    .catch(err => console.error("Error al cargar el header:", err));
+
+// 2. 🚀 EVENTO DELEGADO GLOBAL PARA EL MENÚ HAMBURGUESA
+// Funciona siempre, incluso si el header tarda milisegundos en inyectarse con fetch
+document.addEventListener('click', function(event) {
+    const hamburgerBtn = event.target.closest('#hamburgerBtn');
+    
+    if (hamburgerBtn) {
+        event.preventDefault();
+        event.stopPropagation();
+        const navLinks = document.getElementById('navLinks');
+        if (navLinks) {
+            navLinks.classList.toggle('active');
+        }
+    }
+});
 
 // 2. Cargar el Footer de forma independiente
 fetch("partials/footer.html")
@@ -112,4 +130,28 @@ document.addEventListener("DOMContentLoaded", function () {
     if (categoriaUrl) {
         filtrarCategoria(categoriaUrl);
     }
+});
+
+/* ==========================================================================
+   CARRUSEL AUTOMÁTICO DE 5 IMÁGENES EN INICIO (Derecha a Izquierda)
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".page-inicio .hero-carousel");
+    if (!carousel) return;
+
+    const images = carousel.querySelectorAll("img");
+    if (images.length === 0) return;
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Quitamos la clase active de la imagen actual
+        images[currentIndex].classList.remove("active");
+        
+        // Avanzamos a la siguiente imagen (en bucle del 0 al 4)
+        currentIndex = (currentIndex + 1) % images.length;
+        
+        // Activamos la nueva imagen para que entre desde la derecha
+        images[currentIndex].classList.add("active");
+    }, 4000); // Cambia cada 4 segundos
 });

@@ -1,0 +1,251 @@
+/* ==========================================================
+   LE BOULEVARD — Encabezado: Barra Superior + Menú
+   Todas las variables desde _variables.css
+   ========================================================== */
+
+/* 🔹 Barra Superior de Contacto */
+.top-bar {
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    color: var(--color-blanco);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.top-bar .logo {
+    height: 50px;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    font-family: var(--fuente-base);
+}
+
+.contact-block {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-line i {
+    font-size: 0.88rem;
+    color: var(--color-blanco);
+}
+
+.contact-line:hover {
+    color: var(--color-blanco);
+    text-decoration: underline;
+}
+
+.item-location {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.78rem;
+}
+
+.item-location i {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.top-social-icons {
+    display: flex;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.top-social-icons a {
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.78rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-social-icons a:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    border-color: var(--color-blanco);
+    transform: translateY(-1px);
+}
+
+/* 🔹 Menú de Navegación Principal (Sticky) */
+.menu-bar {
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid #EAEAEA;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container {
+    max-width: 180px;
+}
+
+.logo-container .logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.menu-bar ul.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar ul.nav-links > li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu-bar ul.nav-links > li a {
+    color: var(--color-texto); /* ✅ Actualizado */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.menu-bar ul.nav-links > li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primario);
+    transition: width 0.3s ease;
+}
+
+.menu-bar ul.nav-links > li a:hover,
+.menu-bar ul.nav-links > li a.active {
+    color: var(--color-primario);
+}
+
+.menu-bar ul.nav-links > li a:hover::after,
+.menu-bar ul.nav-links > li a.active::after {
+    width: 100%;
+}
+
+/* 🔹 Flecha del Submenú */
+.menu-bar .item-arrow {
+    font-size: 11px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.menu-bar li.dropdown:hover .item-arrow {
+    transform: rotate(180deg);
+    color: var(--color-primario);
+}
+
+.menu-bar ul.nav-links > li.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 18px;
+}
+
+/* 🔹 Submenú Desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-blanco);
+    width: 230px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+    list-style: none;
+    display: none;
+    z-index: 1000;
+    border-radius: 4px;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: dropdownFadeIn 0.2s ease-out;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dropdown-menu li a {
+    display: block;
+    width: 100%;
+    padding: 11px 24px !important;
+    text-align: left !important;
+    color: var(--color-texto); /* ✅ Actualizado */
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--color-primario) !important;
+    background-color: #FFF0F0 !important;
+    text-align: left !important;
+    padding: 11px 24px !important;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}

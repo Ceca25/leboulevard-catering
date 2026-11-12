@@ -1,0 +1,41 @@
+/* ==========================================================================
+   VARIABLES GLOBALES - LE BOULEVARD CATERING
+   ========================================================================== */
+:root {
+    /* Colores corporativos de Le Boulevard Catering */
+    --color-primario: #C00000;
+    --color-primario-hover: #9e0b22;
+    --color-texto: #2D2D2D;
+    --color-blanco: #FFFFFF;
+    --color-fondo: #FFFFFF;
+    
+    /* Tipografías oficiales */
+    --fuente-base: 'Roboto', sans-serif;
+    --fuente-titulo: 'Playfair Display', serif;
+
+    /* Espaciados reutilizables */
+    --padding-seccion: 5rem 5%;
+}
+
+/* Estilos Base del Documento */
+body {
+    font-family: var(--fuente-base);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Encabezados Globales de Secciones */
+h1, h2, h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-primario);
+    text-align: center;
+    margin: 0;
+}
+
+/* --- COMPORTAMIENTO DE DESPLAZAMIENTO --- */
+html {
+    scroll-behavior: auto !important; /* Desactiva transiciones suaves nativas que causan rebotes */
+}

@@ -1,0 +1,197 @@
+/* ==========================================================================
+   _page_inicio.css — Página Principal (Inicio)
+   Utiliza estrictamente las variables globales de _variables.css
+   Clase en <body>: <body class="page-inicio">
+   ========================================================== */
+
+/* --- 1. SECCIÓN HERO (Banner Principal con Carrusel de Fondo) --- */
+.page-inicio .hero {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--color-fondo);
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor absoluto para las 5 imágenes de fondo */
+.page-inicio .hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Capa oscura translúcida para garantizar que el texto blanco resalte con elegancia */
+.page-inicio .hero-carousel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Estilo individual de cada foto del carrusel (Ocultas por defecto) */
+.page-inicio .hero-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    z-index: 1;
+}
+
+/* Imagen activa que se muestra en pantalla con efecto suave */
+.page-inicio .hero-carousel img.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+/* Contenido del Hero (Texto y Botón flotando por encima de las fotos) */
+.page-inicio .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.page-inicio .hero h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 3.2rem;
+    color: var(--color-blanco);
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    letter-spacing: -0.5px;
+}
+
+.page-inicio .hero p {
+    font-family: var(--fuente-base);
+    font-size: 1.25rem;
+    color: var(--color-blanco);
+    margin: 0 0 30px 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    opacity: 0.95;
+}
+
+/* Botón de llamado a la acción (CTA) */
+.page-inicio .cta {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 14px 38px;
+    text-decoration: none;
+    font-family: var(--fuente-base);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(192, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.page-inicio .cta:hover {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+}
+
+
+/* --- 2. SECCIÓN DE PASOS / PROCESO (Debajo del Hero) --- */
+/* ==========================================================================
+   SECCIÓN DE TARJETAS CON ICONO A LA IZQUIERDA (_page_inicio.css)
+   ========================================================================== */
+.page-inicio .steps-section {
+    background-color: var(--color-fondo);
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.page-inicio .steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Tarjeta principal como enlace horizontal */
+.page-inicio .step-card {
+    background: var(--color-blanco);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 25px 25px;
+    text-align: left; /* Alineado a la izquierda */
+    flex: 1 1 320px;
+    max-width: 380px;
+    display: flex;
+    align-items: center; /* Centra verticalmente el icono con el texto */
+    gap: 20px; /* Espacio entre el icono y el texto */
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-inicio .step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(192, 0, 0, 0.12);
+}
+
+/* Contenedor del Icono a la izquierda (Tamaño controlado) */
+.page-inicio .step-icon {
+    flex-shrink: 0; /* Evita que el icono se deforme */
+    width: 55px;
+    height: 55px;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Bordes ligeramente redondeados estilo moderno */
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Animación sutil en el icono al pasar el cursor */
+.page-inicio .step-card:hover .step-icon {
+    transform: scale(1.08);
+}
+
+/* Contenedor de textos */
+.page-inicio .card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-inicio .step-card h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.25rem;
+    color: var(--color-texto);
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.page-inicio .step-card p {
+    font-family: var(--fuente-base);
+    font-size: 0.9rem;
+    color: var(--color-texto);
+    opacity: 0.75;
+    margin: 0;
+    line-height: 1.4;
+}

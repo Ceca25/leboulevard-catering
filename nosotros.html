@@ -10,7 +10,7 @@
 
 
 </head>
-<body>
+<body class="page-nosotros">
     
     <!-- Contenedor dinámico donde JavaScript inyectará el Header y el Menú Global -->
     <div id="header"></div>
@@ -20,32 +20,32 @@
          CONTENIDO PRINCIPAL (MAIN)
          ========================================== -->
     
-    <main>
-        <!-- Sección Nosotros (Diseño Editorial Equilibrado) -->
-        <section class="nosotros">
-            <div class="nosotros-container">
-                <!-- Imagen Destacada de la Empresa -->
-                <div class="nosotros-img">
-                    <img src="img/nosotros/menaje-evento-06.webp" alt="Equipo de LeBoulevard Catering">
+<main>
+        <!-- Sección Nosotros (Diseño de 2 columnas forzado y limpio) -->
+        <section class="nosotros" style="background-color: #FAFAFA; padding: 60px 20px; width: 100%; box-sizing: border-box;">
+            <div class="nosotros-container" style="display: flex; flex-direction: row; flex-wrap: nowrap; max-width: 1200px; margin: 0 auto; gap: 40px; align-items: center; box-sizing: border-box;">
+                
+                <!-- Columna Izquierda: Imagen -->
+                <div class="nosotros-img" style="flex: 1; min-width: 45%;">
+                    <img src="img/nosotros/menaje-evento-06.webp" alt="Equipo de LeBoulevard Catering" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); display: block;">
                 </div>
-                <!-- Bloque de Texto Corporativo -->
-                <div class="nosotros-text">
-                    <h1>Nosotros</h1>
-                    <p>Somos un referente en el sector de alquiler de insumos y servicios para eventos en Trujillo, La Libertad, Perú...</p>
-                    <p>Con más de 8 años de trayectoria desde 2018, nos hemos consolidado como una empresa comprometida con la calidad y la innovación. Nos mantenemos en constante actualización para adaptarnos a las necesidades cambiantes de nuestros clientes, habiendo participado exitosamente en miles de celebraciones gracias a nuestro amplio catálogo de productos.</p>
-                    <p>Nuestra experiencia y esfuerzo por renovarnos día a día nos permiten brindar una asesoría personalizada, orientada a que cada evento sea un éxito, combinando calidad. Elegancia y puntualidad.</p>
-                    <p>Ofrecemos soluciones integrales de alquiler para todo tipo de ocasiones: desde cumpleaños, bautismos, comuniones, fiestas de 15 años y matrimonios, hasta reuniones familiares, encuentros entre amigos y eventos corporativos. </p>
-                    <p>Nuestro inventario incluye: menaje, cristalería, mobiliario, mantelería, samovares, equipos de grill (caja china y parrilla), además de servicios profesionales como barman y mozos.</p>
-                    <p>Lo invitamos a explorar nuestro catálogo y descubrir la variedad de opciones que tenemos para usted. Cualquiera sea su visión, estamos aquí para hacerla realidad. Nuestro mayor compromiso es su satisfacción, y trabajamos día a día para superar sus expectativas en cada detalle.</p>
+                
+                <!-- Columna Derecha: Textos -->
+                <div class="nosotros-text" style="flex: 1.2; text-align: left;">
+                    <h1 style="font-family: var(--fuente-base); font-size: 2.4rem; color: #C00000; margin: 0 0 20px 0; font-weight: 700; text-transform: uppercase; text-align: left;">Nosotros</h1>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #333333; margin: 0 0 14px 0; font-weight: 300;">Somos un referente en el sector de alquiler de insumos y servicios para eventos en Trujillo, La Libertad, Perú.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #333333; margin: 0 0 14px 0; font-weight: 300;">Con más de 8 años de trayectoria desde 2018, nos hemos consolidado como una empresa comprometida con la calidad y la innovación. Nos mantenemos en constante actualización para adaptarnos a las necesidades cambiantes de nuestros clientes, habiendo participado exitosamente en miles de celebraciones gracias a nuestro amplio catálogo de productos.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #333333; margin: 0 0 14px 0; font-weight: 300;">Nuestra experiencia y esfuerzo por renovarnos día a día nos permiten brindar una asesoría personalizada, orientada a que cada evento sea un éxito, combinando calidad, elegancia y puntualidad.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #333333; margin: 0 0 14px 0; font-weight: 300;">Ofrecemos soluciones integrales de alquiler para todo tipo de ocasiones: desde cumpleaños, bautismos, comuniones, fiestas de 15 años y matrimonios, hasta reuniones familiares, encuentros entre amigos y eventos corporativos.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #333333; margin: 0 0 14px 0; font-weight: 300;">Nuestro inventario incluye: menaje, cristalería, mobiliario, mantelería, samovares, equipos de grill (caja china y parrilla), además de servicios profesionales como barman y mozos.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #333333; margin: 0 0 14px 0; font-weight: 300;">Lo invitamos a explorar nuestro catálogo y descubrir la variedad de opciones que tenemos para usted. Cualquiera sea su visión, estamos aquí para hacerla realidad. Nuestro mayor compromiso es su satisfacción, y trabajamos día a día para superar sus expectativas en cada detalle.</p>
+                </div>
 
-                    <!-- aquí va todo tu texto completo -->
-                </div>
             </div>
         </section>
 
         <!-- Procesos de Alquiler -->
         <section class="procesos">
-            <h1> - Procesos de Alquiler</h1>
             <h2>¿Cómo funciona?</h2>
             <p>En 6 pasos sencillos tu menaje estará listo para el gran día.</p>
             <div class="procesos-grid">
@@ -57,12 +57,11 @@
                 <div class="proceso"><span>6</span><h3>Facturamos</h3><p>Facturamos y cerramos tu servicio</p></div>
             </div>
         </section>
-            <a href="https://wa.me/51924668399" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Cotiza por WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
+        
+        <a href="https://wa.me/51924668399" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Cotiza por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
     </main>
-
     <!-- Contenedor dinámico donde JavaScript inyectará el Footer de la marca -->
     <div id="footer"></div>
 

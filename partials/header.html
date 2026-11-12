@@ -24,11 +24,21 @@
         <nav class="menu-bar">
             <div class="nav-container">
 
-                <!-- AGREGAMOS EL LOGO AQUÍ PARA QUE SE ALINEE AL MENÚ -->
-                <div class="logo-container"> 
-                    <img src="img/logo/logo-leboulevard.png" alt="Le Boulevard Catering" class="logo">
-                </div>
+                <!-- 1. Botón Hamburguesa (Izquierda) -->
+                <!-- Botón Hamburguesa con onclick directo (Evita cualquier bloqueo de extensiones) -->
+                <button class="hamburger-btn" id="hamburgerBtn" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
 
+                <!-- AGREGAMOS EL LOGO AQUÍ PARA QUE SE ALINEE AL MENÚ -->
+                 <!-- 2. Logo a la izquierda -->
+                <div class="logo-container"> 
+                    <a href="index.html">
+                        <img src="img/logo/logo-leboulevard.png" alt="Le Boulevard Catering" class="logo">
+                     </a>   
+                </div>
+              
+                
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
