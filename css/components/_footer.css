@@ -1,10 +1,11 @@
 /* ==========================================================
-   LE BOULEVARD — Pie de Página (Footer) Optimizado y Limpio
+   LE BOULEVARD — Pie de Página (Footer) Fino e Institucional
    ========================================================== */
 
 .main-footer {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
+    background-color: #F4F5F7; /* Fondo gris neutro claro */
+    border-top: 3px solid var(--color-primario); /* Línea roja superior de acento */
+    color: #333333;
     padding: 50px 0 20px 0;
     font-family: var(--fuente-base);
     width: 100%;
@@ -31,7 +32,7 @@
     text-align: left;
 }
 
-/* Columna 1: Logo controlado (Idéntico comportamiento al Header) */
+/* Columna 1: Logo controlado */
 .footer-column.col-logo {
     flex: 0 0 240px !important;
     max-width: 240px !important;
@@ -41,43 +42,44 @@
 }
 
 .footer-brand-logo {
-    width: 210px !important;            /* Ancho grande y directo */
-    height: auto !important;            /* Proporción automática */
-    max-height: 90px !important;        /* Altura máxima generosa para que luzca grande */
+    width: 210px !important;
+    height: auto !important;
+    max-height: 90px !important;
     object-fit: contain !important;
-    filter: brightness(0) invert(1) !important; /* Blanco nítido */
     display: block !important;
     margin: 0 !important;
 }
 
-/* Columna 2: Títulos y textos */
+/* Títulos limpios, formales y con tipografía natural (sin mayúsculas forzadas) */
 .footer-column h3 {
     font-family: var(--fuente-base);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: var(--color-blanco);
+    color: #2C2C2C; /* Gris oscuro institucional */
     margin: 0 0 15px 0;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    text-transform: none; /* Respeta las minúsculas naturales */
 }
 
+/* Textos de información FINOS y LIGEROS (font-weight normal) */
 .footer-info-item {
     font-size: 0.82rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
+    color: #444444; /* Gris oscuro legible pero suave */
     margin: 0 0 8px 0;
-    font-weight: 300;
+    font-weight: 400; /* Peso normal, nada de negritas pesadas */
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
+/* Iconos sutiles en armonía con el texto */
 .footer-info-item i {
     font-size: 0.9rem;
-    opacity: 0.9;
+    color: #555555; 
 }
 
-/* Columna 3: Redes Sociales CUADRADAS (Idénticas al Header) */
+/* Columna 3: Redes Sociales CUADRADAS */
 .footer-column.col-social {
     align-items: flex-start;
 }
@@ -91,10 +93,10 @@
 .footer-social-icons a {
     width: 36px;
     height: 36px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 6px; /* Cuadrado con esquinas ligeramente redondeadas como el header */
-    color: var(--color-blanco);
-    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px; 
+    color: #333333; 
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,13 +106,13 @@
 }
 
 .footer-social-icons a:hover {
-    background-color: var(--color-blanco);
-    color: var(--color-primario);
-    border-color: var(--color-blanco);
+    background-color: var(--color-primario); /* Al pasar el mouse adopta tu rojo corporativo */
+    color: #FFFFFF;
+    border-color: var(--color-primario);
     transform: translateY(-3px);
 }
 
-/* Columna 4: Alquiler Seguro y Libro de Reclamaciones */
+/* Columna 4: Alquiler Seguro y Libro de Reclamaciones con texto ligero */
 .footer-column.col-seguro {
     align-items: flex-start;
 }
@@ -118,9 +120,9 @@
 .footer-seguro-text {
     font-size: 0.82rem;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.85);
+    color: #444444;
     margin: 0 0 12px 0;
-    font-weight: 300;
+    font-weight: 400; /* Peso normal y fluido */
 }
 
 .footer-book-link {
@@ -143,7 +145,7 @@
 /* Barra inferior de derechos */
 .footer-bottom {
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     margin-top: 35px;
     padding-top: 18px;
     text-align: center;
@@ -151,6 +153,6 @@
 
 .footer-bottom p {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #666666;
     margin: 0;
 }

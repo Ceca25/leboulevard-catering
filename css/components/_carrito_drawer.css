@@ -1,0 +1,344 @@
+/* ==========================================================================
+   COMPONENTE REUTILIZABLE: SELECTOR, BOTÓN PÍLDORA Y PANEL LATERAL CARRITO
+   ========================================================================== */
+
+/* Selector de Cantidad Moderno */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 auto 12px auto;
+    background: #fafafa;
+    max-width: 130px;
+}
+
+.qty-btn {
+    background: #f0f0f0;
+    border: none;
+    color: #333;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.qty-btn:hover {
+    background: #e2e2e2;
+    color: #b81c22;
+}
+
+.qty-input {
+    width: 45px;
+    height: 35px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    background: transparent;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botón Estilo Píldora: Agregar al Carrito */
+.btn-add-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 42px;
+    padding: 3px 3px 3px 16px;
+    background-color: #b81c22;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+    box-shadow: 0 4px 10px rgba(184, 28, 34, 0.2);
+}
+
+.btn-add-pill:hover {
+    background-color: #961419;
+    transform: translateY(-1px);
+}
+
+.btn-pill-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn-pill-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    color: #b81c22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* Overlay y Panel Lateral Derecho */
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2000;
+    display: none;
+    backdrop-filter: blur(2px);
+}
+
+.cart-overlay.active {
+    display: block;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 400px;
+    max-width: 92vw;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -6px 0 25px rgba(0, 0, 0, 0.18);
+    z-index: 2001;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header-red {
+    background-color: #b81c22;
+    color: #ffffff;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header-red h2 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.close-cart-text {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.close-cart-text span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.cart-items-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-item-row {
+    display: flex;
+    gap: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ececec;
+    align-items: flex-start;
+}
+
+.cart-item-thumb {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 4px;
+    background: #fff;
+}
+
+.cart-item-body {
+    flex: 1;
+    text-align: left;
+}
+
+.cart-item-brand {
+    font-size: 11px;
+    color: #888;
+    display: block;
+}
+
+.cart-item-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin: 2px 0 4px 0;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cart-mini-qty {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cart-mini-qty button {
+    background: #fff;
+    border: none;
+    width: 28px;
+    height: 26px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-mini-qty button:hover {
+    background: #f3f3f3;
+}
+
+.cart-mini-qty span {
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cart-item-delete {
+    background: none;
+    border: none;
+    color: #b0b0b0;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.cart-item-delete:hover {
+    color: #b81c22;
+}
+
+.cart-footer-summary {
+    padding: 20px 22px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.summary-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #1a1a1a;
+    text-align: left;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.summary-row .text-muted {
+    color: #777;
+}
+
+.summary-row.total-row {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.btn-checkout-pill {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background-color: #b81c22;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    transition: background 0.2s;
+}
+
+.btn-checkout-pill:hover {
+    background-color: #961419;
+}
+
+.btn-whatsapp-pill {
+    width: 100%;
+    padding: 11px;
+    background-color: #25d366;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-whatsapp-pill:hover {
+    background-color: #1ebe5d;
+}
+
+.cart-notice {
+    font-size: 11px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}

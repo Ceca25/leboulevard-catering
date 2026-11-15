@@ -3,14 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Le Boulevard Catering</title>
+    <title>Contactos - Le Boulevard Catering</title>
+    <!-- CSS Unificado -->
     <link rel="stylesheet" href="css/estilos.css">
+    <!-- Tipografías Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Iconos Gratuitos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="page-contactos">
 
-    <div id="header"></div>
+    <!-- Header Estático Profesional (Cero Saltos) -->
+    <header>
+        <div class="top-bar">
+            <!-- Bloque Izquierdo: Datos de contacto -->
+            <div class="contact-block">
+                <a href="https://wa.me/51924668399" target="_blank" rel="noopener noreferrer" class="contact-line">
+                    <i class="fa-brands fa-whatsapp"></i> <span>+51 924668399</span>
+                </a>
+                <div class="contact-line item-location">
+                    <i class="fa-solid fa-location-dot"></i> <span>Trujillo, La Libertad, Perú</span>
+                </div>
+            </div>
+            
+            <!-- Bloque Derecho: Redes Sociales -->
+            <div class="social-container">
+                <div class="top-social-icons">
+                    <a href="https://facebook.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/LeboulevardCat" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-bar">
+            <div class="nav-container">
+                <!-- Botón Hamburguesa -->
+                <button class="hamburger-btn" id="hamburgerBtn" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo a la izquierda -->
+                <div class="logo-container"> 
+                    <a href="index.html">
+                        <img src="img/logo/logo-leboulevard.png" alt="Le Boulevard Catering" class="logo">
+                    </a>   
+                </div>
+                
+                <!-- Enlaces de Navegación -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+            
+                    <li class="dropdown">
+                        <a href="servicios.html" class="dropdown-toggle">Servicios <i class="fa-solid fa-chevron-down item-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                              <li><a href="servicios/adornos.html">Decoración</a></li>
+                                <li><a href="servicios/menaje.html">Menaje</a></li>
+                                <li><a href="servicios/cuberteria.html">Cuberterías</a></li>
+                                <li><a href="servicios/cristaleria.html">Cristalería</a></li>
+                                <li><a href="servicios/coffee-break.html">Estaciones de Café</a></li>
+                                <li><a href="servicios/grill.html">Equipos de Parrilla</a></li>
+                                <li><a href="servicios/mobiliario.html">Mobiliario</a></li>
+                                <li><a href="servicios/manteleria.html">Mantelería</a></li>
+                                <li><a href="servicios/mozos.html">Personal - Eventos</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contactos.html" class="active">Contactos</a></li>
+                </ul>
+
+                <!-- Carrito / Cotizador -->
+                <div class="cart-container">
+                    <a href="cotizacion.html" class="cart-btn">
+                        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <span class="cart-text">
+                            <span id="cart-count">0</span> productos - S/. <span id="cart-total">0</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main style="padding: 40px 20px; background-color: #FAFAFA;">
         
@@ -24,68 +100,68 @@
         <div class="contacto-layout-container">
             
             <section class="formulario-simple">
-    <h2><i class="fa-solid fa-envelope-open-text"></i> Déjanos tus datos</h2>
-    <form action="procesar_formulario.php" method="post">
+                <h2><i class="fa-solid fa-envelope-open-text"></i> Déjanos tus datos</h2>
+                <form action="procesar_formulario.php" method="post">
     
-        <div class="form-group">
-            <label for="documento">DNI / RUC <span class="req">*</span></label>
-            <input type="text" id="documento" name="documento" placeholder="Ej. 18120781 o 20601234567" required minlength="8" maxlength="11">
-        </div>
+                    <div class="form-group">
+                        <label for="documento">DNI / RUC <span class="req">*</span></label>
+                        <input type="text" id="documento" name="documento" placeholder="Ej. 18120781 o 20601234567" required minlength="8" maxlength="11">
+                    </div>
 
-        <div class="form-group">
-            <label for="nombre">Nombre / Razón Social <span class="req">*</span></label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
-        </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre / Razón Social <span class="req">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
 
-        <div class="form-group">
-            <label for="correo">Correo electrónico <span class="req">*</span></label>
-            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
-        </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico <span class="req">*</span></label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    </div>
 
-        <div class="form-group">
-            <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 924668399" required>
-        </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 924668399" required>
+                    </div>
 
-        <div class="form-group">
-            <label for="evento">Tipo de Evento <span class="req">*</span></label>
-            <input type="text" id="evento" name="evento" placeholder="Ej. Boda, Corporativo" required>
-        </div>
+                    <div class="form-group">
+                        <label for="evento">Tipo de Evento <span class="req">*</span></label>
+                        <input type="text" id="evento" name="evento" placeholder="Ej. Boda, Corporativo" required>
+                    </div>
 
-        <div class="form-group">
-            <label for="invitados">Nro. aproximado de invitados <span class="req">*</span></label>
-            <input type="number" id="invitados" name="invitados" placeholder="Ej. 100" min="1" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="fecha">Fecha del evento <span class="req">*</span></label>
-            <input type="date" id="fecha" name="fecha" required>
-        </div>
+                    <div class="form-group">
+                        <label for="invitados">Nro. aproximado de invitados <span class="req">*</span></label>
+                        <input type="number" id="invitados" name="invitados" placeholder="Ej. 100" min="1" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="fecha">Fecha del evento <span class="req">*</span></label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
 
-        <div class="form-group">
-            <label for="direccion">Lugar o Local (Trujillo) <span class="req">*</span></label>
-            <input type="text" id="direccion" name="direccion" placeholder="Ej. Av. Larco 123 o Local Huanchaco" required>
-        </div>
+                    <div class="form-group">
+                        <label for="direccion">Lugar o Local (Trujillo) <span class="req">*</span></label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ej. Av. Larco 123 o Local Huanchaco" required>
+                    </div>
 
-        <div class="form-group textarea-full">
-            <label for="mensaje">Mensaje / Consulta <span class="req">*</span></label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más detalles sobre lo que necesitas (menaje, cristaleria, mobilario, mozos, barman, caja china)..." required></textarea>
-        </div>
+                    <div class="form-group textarea-full">
+                        <label for="mensaje">Mensaje / Consulta <span class="req">*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más detalles sobre lo que necesitas (menaje, cristaleria, mobilario, mozos, barman, caja china)..." required></textarea>
+                    </div>
 
-        <div class="form-group textarea-full politicas-checkbox">
-            <label for="privacidad">
-                <input type="checkbox" id="privacidad" name="privacidad" required>
-                <span>Acepto que mis datos serán utilizados con el objetivo de brindarme servicios, productos y asistencia, conformes a la política de privacidad. <a href="#">Política de privacidad</a> <span class="req">*</span></span>
-            </label>
-        </div>
-    
-        <div class="textarea-full">
-            <button type="submit" class="btn-form">
-                <i class="fa-solid fa-paper-plane"></i> ENVIAR MENSAJE
-            </button>
-        </div>
-    </form>
-</section>
+                    <div class="form-group textarea-full politicas-checkbox">
+                        <label for="privacidad">
+                            <input type="checkbox" id="privacidad" name="privacidad" required>
+                            <span>Acepto que mis datos serán utilizados con el objetivo de brindarme servicios, productos y asistencia, conformes a la política de privacidad. <a href="#">Política de privacidad</a> <span class="req">*</span></span>
+                        </label>
+                    </div>
+                
+                    <div class="textarea-full">
+                        <button type="submit" class="btn-form">
+                            <i class="fa-solid fa-paper-plane"></i> ENVIAR MENSAJE
+                        </button>
+                    </div>
+                </form>
+            </section>
 
             <div class="columna-derecha-cotizador">
                 <div class="tarjeta-referencia-galeria">
@@ -104,6 +180,7 @@
         </div> 
     </main>
 
+    <!-- Script de EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
@@ -111,68 +188,60 @@
     emailjs.init("g3RUIpJGbe4DfDc69");
 
     document.querySelector('.formulario-simple form').addEventListener('submit', function(e) {
-    e.preventDefault(); 
+        e.preventDefault(); 
 
-    // Captura ordenada de los 8 parámetros del formulario
-    const documento = document.getElementById('documento').value;
-    const nombre = document.getElementById('nombre').value;
-    const correo = document.getElementById('correo').value;
-    const telefono = document.getElementById('telefono').value;
-    const evento = document.getElementById('evento').value;
-    const invitados = document.getElementById('invitados').value; // Captura el texto del <select>
-    const fecha = document.getElementById('fecha').value;
-    const direccion = document.getElementById('direccion').value;
-    const mensaje = document.getElementById('mensaje').value;
+        const documento = document.getElementById('documento').value;
+        const nombre = document.getElementById('nombre').value;
+        const correo = document.getElementById('correo').value;
+        const telefono = document.getElementById('telefono').value;
+        const evento = document.getElementById('evento').value;
+        const invitados = document.getElementById('invitados').value;
+        const fecha = document.getElementById('fecha').value;
+        const direccion = document.getElementById('direccion').value;
+        const mensaje = document.getElementById('mensaje').value;
 
-    // ==========================================
-    // CANAL 1: ENVÍO INTEGRADO A EMAILJS
-    // ==========================================
-    const datosCorreo = {
-        doc_identidad: documento,
-        from_name: nombre,
-        reply_to: correo,
-        telefono_cliente: telefono,
-        tipo_evento: evento,
-        nro_invitados: invitados,
-        fecha_evento: fecha,
-        direccion_evento: direccion,
-        message: mensaje
-    };
+        // CANAL 1: ENVÍO INTEGRADO A EMAILJS
+        const datosCorreo = {
+            doc_identidad: documento,
+            from_name: nombre,
+            reply_to: correo,
+            telefono_cliente: telefono,
+            tipo_evento: evento,
+            nro_invitados: invitados,
+            fecha_evento: fecha,
+            direccion_evento: direccion,
+            message: mensaje
+        };
 
-// Recuerda cambiar estos parámetros por tus IDs de EmailJS reales
-    emailjs.send("service_z9fmlon", "template_iayni6p", datosCorreo)
-        .then(() => {
-            console.log("Sincronización de correo completada con éxito.");
-        }, (error) => {
-            console.error("Error en el respaldo de correo:", error);
-        });
+        emailjs.send("service_z9fmlon", "template_iayni6p", datosCorreo)
+            .then(() => {
+                console.log("Sincronización de correo completada con éxito.");
+            }, (error) => {
+                console.error("Error en el respaldo de correo:", error);
+            });
 
-    // ==========================================
-    // CANAL 2: REDIRECCIÓN PROFESIONAL A WHATSAPP
-    // ==========================================
-    const numeroWhatsApp = "51924668399"; 
+        // CANAL 2: REDIRECCIÓN PROFESIONAL A WHATSAPP
+        const numeroWhatsApp = "51924668399"; 
 
-    const textoMensaje = `✨ *Nueva Consulta - Le Boulevard Catering* ✨%0A%0A` +
-                         `🪪 *DNI/RUC:* ${documento}%0A` +
-                         `👤 *Cliente:* ${nombre}%0A` +
-                         `📧 *Correo:* ${correo}%0A` +
-                         `📱 *Teléfono:* ${telefono}%0A` +
-                         `🎉 *Evento:* ${evento}%0A` +
-                         `👥 *Invitados:* ${invitados}%0A` +
-                         `📅 *Fecha:* ${fecha}%0A` +
-                         `📍 *Lugar:* ${direccion}%0A%0A` +
-                         `💬 *Consulta:*%0A${mensaje}`;
+        const textoMensaje = `✨ *Nueva Consulta - Le Boulevard Catering* ✨%0A%0A` +
+                            `🪪 *DNI/RUC:* ${documento}%0A` +
+                            `👤 *Cliente:* ${nombre}%0A` +
+                            `📧 *Correo:* ${correo}%0A` +
+                            `📱 *Teléfono:* ${telefono}%0A` +
+                            `🎉 *Evento:* ${evento}%0A` +
+                            `👥 *Invitados:* ${invitados}%0A` +
+                            `📅 *Fecha:* ${fecha}%0A` +
+                            `📍 *Lugar:* ${direccion}%0A%0A` +
+                            `💬 *Consulta:*%0A${mensaje}`;
 
-    const urlFinal = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${textoMensaje}`;
-    
-    // Abrir canal de atención
-    window.open(urlFinal, '_blank');
-    
-    // Limpieza automática del formulario
-    e.target.reset();
-});
+        const urlFinal = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${textoMensaje}`;
+        
+        window.open(urlFinal, '_blank');
+        e.target.reset();
+    });
     </script>
 
+    <!-- Footer dinámico -->
     <div id="footer"></div>
     <script src="js/include.js"></script>
 

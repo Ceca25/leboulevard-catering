@@ -3,99 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Le Boulevard Catering</title>
-    <!-- CSS Unificado (Asegúrate de que la carpeta coincida si usas mayúsculas/minúsculas 'CSS' o 'css') -->
+    <title>Galería - Le Boulevard Catering</title>
+    <!-- CSS Unificado -->
     <link rel="stylesheet" href="css/estilos.css">
     <!-- Tipografías Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Iconos Gratuitos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="page-galeria">
 
-    <!-- Contenedor dinámico donde JavaScript inyectará el Header y el Menú Global -->
-    <div id="header"></div>
+    <!-- Header Estático Profesional (Cero Saltos) -->
+    <header>
+        <div class="top-bar">
+            <!-- Bloque Izquierdo: Datos de contacto -->
+            <div class="contact-block">
+                <a href="https://wa.me/51924668399" target="_blank" rel="noopener noreferrer" class="contact-line">
+                    <i class="fa-brands fa-whatsapp"></i> <span>+51 924668399</span>
+                </a>
+                <div class="contact-line item-location">
+                    <i class="fa-solid fa-location-dot"></i> <span>Trujillo, La Libertad, Perú</span>
+                </div>
+            </div>
+            
+            <!-- Bloque Derecho: Redes Sociales -->
+            <div class="social-container">
+                <div class="top-social-icons">
+                    <a href="https://facebook.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/LeboulevardCat" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-bar">
+            <div class="nav-container">
+                <!-- Botón Hamburguesa -->
+                <button class="hamburger-btn" id="hamburgerBtn" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo a la izquierda -->
+                <div class="logo-container"> 
+                    <a href="index.html">
+                        <img src="img/logo/logo-leboulevard.png" alt="Le Boulevard Catering" class="logo">
+                    </a>   
+                </div>
+                
+                <!-- Enlaces de Navegación -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+            
+                    <li class="dropdown">
+                        <a href="servicios.html" class="dropdown-toggle">Servicios <i class="fa-solid fa-chevron-down item-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                                <li><a href="servicios/adornos.html">Decoración</a></li>
+                                <li><a href="servicios/menaje.html">Menaje</a></li>
+                                <li><a href="servicios/cuberteria.html">Cuberterías</a></li>
+                                <li><a href="servicios/cristaleria.html">Cristalería</a></li>
+                                <li><a href="servicios/coffee-break.html">Estaciones de Café</a></li>
+                                <li><a href="servicios/grill.html">Equipos de Parrilla</a></li>
+                                <li><a href="servicios/mobiliario.html">Mobiliario</a></li>
+                                <li><a href="servicios/manteleria.html">Mantelería</a></li>
+                                <li><a href="servicios/mozos.html">Personal - Eventos</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+
+                <!-- Carrito / Cotizador -->
+                <div class="cart-container">
+                    <a href="cotizacion.html" class="cart-btn">
+                        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <span class="cart-text">
+                            <span id="cart-count">0</span> productos - S/. <span id="cart-total">0</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
-       
-    <!-- SECCIÓN GALERÍA REAL DE EVENTOS -->
-    <section class="galeria-eventos">
+        <!-- SECCIÓN GALERÍA REAL DE EVENTOS -->
+        <section class="galeria-eventos">
 
-        <!-- ENCABEZADO DE SECCIÓN UNIFICADO -->
-        <div class="section-header-premium">
-            <h2 class="header-titulo-principal">Galería Fotográfica</h2>
-            <p class="header-subtitulo-decorativo">Cada detalle, una historia</p>
-            <p class="header-descripcion-corta">Fotografías reales de eventos equipados con nuestro menaje y servicios.</p>
-            <div class="header-linea-separadora"></div>
-        </div>
-
-        <!-- Contenedor Grid de Imágenes -->
-        <div class="galeria-grid">
-
-            <!-- Fila 1 -->
-            <div class="galeria-item">
-                <img src="img/inicio/menaje-evento-01.webp" alt="Montaje de mesas redondas premium Le Boulevard">
-                <div class="item-overlay"><span>Banquete Elegante</span></div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/Galeria/menaje-evento-03.webp" alt="Equipamiento de buffet y menaje fino">
-                <div class="item-overlay"><span>Servicio de Catering</span></div>
-            </div>
-            <div class="galeria-item text-center">
-                <img src="img/Galeria/menaje-evento-04.webp" alt="Decoración de salones corporativos">
-                <div class="item-overlay"><span>Eventos Corporativos</span></div>
+            <!-- ENCABEZADO DE SECCIÓN UNIFICADO -->
+            <div class="section-header-premium">
+                <h2 class="header-titulo-principal">Galería Fotográfica</h2>
+                <p class="header-subtitulo-decorativo">Cada detalle, una historia</p>
+                <p class="header-descripcion-corta">Fotografías reales de eventos equipados con nuestro menaje y servicios.</p>
+                <div class="header-linea-separadora"></div>
             </div>
 
-            <!-- Fila 2 -->
-            <div class="galeria-item">
-                <img src="img/inicio/caja-china-01.webp" alt="Vista aérea de distribución de mesas y menaje">
-                <div class="item-overlay"><span>Distribución Impecable</span></div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/Galeria/menaje-evento-05.webp" alt="Montaje exterior con sillas decorativas">
-                <div class="item-overlay"><span>Eventos al Aire Libre</span></div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/Galeria/cafetera-electrica.webp" alt="Mobiliario fino y mantelería premium">
-                <div class="item-overlay"><span>Menaje Exclusivo</span></div>
-            </div>
+            <!-- Contenedor Grid de Imágenes -->
+            <div class="galeria-grid">
 
-            <!-- Fila 3 -->
-            <div class="galeria-item">
-                <img src="img/Galeria/mozo-evento-01.webp" alt="Vista aérea de distribución de mesas y menaje">
-                <div class="item-overlay"><span>Distribución Impecable</span></div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/Galeria/mozo-evento-02.webp" alt="Montaje exterior con sillas decorativas">
-                <div class="item-overlay"><span>Eventos al Aire Libre</span></div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/Galeria/mozo-evento-03.webp" alt="Mobiliario fino y mantelería premium">
-                <div class="item-overlay"><span>Menaje Exclusivo</span></div>
-            </div>
+                <!-- Fila 1 -->
+                <div class="galeria-item">
+                    <img src="img/inicio/menaje-evento-01.webp" alt="Montaje de mesas redondas premium Le Boulevard">
+                    <div class="item-overlay"><span>Banquete Elegante</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/Galeria/menaje-evento-03.webp" alt="Equipamiento de buffet y menaje fino">
+                    <div class="item-overlay"><span>Servicio de Catering</span></div>
+                </div>
+                <div class="galeria-item text-center">
+                    <img src="img/Galeria/menaje-evento-04.webp" alt="Decoración de salones corporativos">
+                    <div class="item-overlay"><span>Eventos Corporativos</span></div>
+                </div>
 
-            <!-- Fila 4 -->
-            <div class="galeria-item">
-                <img src="img/Galeria/algarobina.webp" alt="Vista aérea de distribución de mesas y menaje">
-                <div class="item-overlay"><span>Distribución Impecable</span></div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/Galeria/daiquiri-fresa.webp" alt="Montaje exterior con sillas decorativas">
-                <div class="item-overlay"><span>Eventos al Aire Libre</span></div>
-            </div>
-            <div class="galeria-item">
-                <img src="img/Galeria/pina-colada.webp" alt="Mobiliario fino y mantelería premium">
-                <div class="item-overlay"><span>Menaje Exclusivo</span></div>
-            </div>
+                <!-- Fila 2 -->
+                <div class="galeria-item">
+                    <img src="img/inicio/caja-china-01.webp" alt="Vista aérea de distribución de mesas y menaje">
+                    <div class="item-overlay"><span>Distribución Impecable</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/Galeria/menaje-evento-05.webp" alt="Montaje exterior con sillas decorativas">
+                    <div class="item-overlay"><span>Eventos al Aire Libre</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/Galeria/cafetera-electrica.webp" alt="Mobiliario fino y mantelería premium">
+                    <div class="item-overlay"><span>Menaje Exclusivo</span></div>
+                </div>
 
-        </div>
-    </section>
+                <!-- Fila 3 -->
+                <div class="galeria-item">
+                    <img src="img/Galeria/mozo-evento-01.webp" alt="Vista aérea de distribución de mesas y menaje">
+                    <div class="item-overlay"><span>Distribución Impecable</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/Galeria/mozo-evento-02.webp" alt="Montaje exterior con sillas decorativas">
+                    <div class="item-overlay"><span>Eventos al Aire Libre</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/Galeria/mozo-evento-03.webp" alt="Mobiliario fino y mantelería premium">
+                    <div class="item-overlay"><span>Menaje Exclusivo</span></div>
+                </div>
 
-</main>
-    <!-- Contenedor dinámico donde JavaScript inyectará el Footer de la marca -->
+                <!-- Fila 4 -->
+                <div class="galeria-item">
+                    <img src="img/Galeria/algarobina.webp" alt="Vista aérea de distribución de mesas y menaje">
+                    <div class="item-overlay"><span>Distribución Impecable</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/Galeria/daiquiri-fresa.webp" alt="Montaje exterior con sillas decorativas">
+                    <div class="item-overlay"><span>Eventos al Aire Libre</span></div>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/Galeria/pina-colada.webp" alt="Mobiliario fino y mantelería premium">
+                    <div class="item-overlay"><span>Menaje Exclusivo</span></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer dinámico -->
     <div id="footer"></div>
 
-    <!-- Script Maestro encargado de cargar de forma asíncrona los componentes comunes -->
+    <!-- Script Maestro -->
     <script src="js/include.js"></script>
 
 </body>

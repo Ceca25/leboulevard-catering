@@ -1,0 +1,73 @@
+
+/* ==========================================================================
+   SECCIÓN GALERÍA FOTOGRÁFICA PREMIUM (REJILLA)
+   ========================================================================== */
+.galeria-eventos {
+    padding: 80px 40px;
+    background-color: #FFFFFF;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Arquitectura de Cuadrícula (Grid de 3 columnas como en tu ejemplo) */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Separación milimétrica limpia */
+}
+
+/* Elementos Individuales de la Galería */
+.galeria-item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden; /* Corta el desborde del zoom de la imagen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #F5F5F5;
+    aspect-ratio: 16 / 10; /* Mantiene la proporción horizontal corporativa */
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto al cuadro sin deformarla */
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Capa de texto flotante elegante en hover */
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.4); /* Capa oscura sutil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item-overlay span {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+/* Animaciones de interacción */
+.galeria-item:hover img {
+    transform: scale(1.06); /* Zoom fluido idéntico a las galerías premium */
+}
+
+.galeria-item:hover .item-overlay {
+    opacity: 1;
+}

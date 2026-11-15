@@ -1,22 +1,21 @@
 /* ==========================================================
-   LE BOULEVARD — Encabezado: Barra Superior + Menú
-   Todas las variables desde _variables.css
+   LE BOULEVARD — Estilos del Encabezado (Header + Menú)
    ========================================================== */
 
 /* 🔹 Barra Superior de Contacto */
 .top-bar {
-    background-color: var(--color-primario);
+    background-color: var(--color-primario, #C00000);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 40px;
-    color: var(--color-blanco);
+    color: #FFFFFF;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .top-bar .logo {
     height: 50px;
-    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
     transition: transform 0.3s ease;
     display: block;
 }
@@ -26,7 +25,6 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 5px;
-    font-family: var(--fuente-base);
 }
 
 .contact-block {
@@ -49,11 +47,11 @@
 
 .contact-line i {
     font-size: 0.88rem;
-    color: var(--color-blanco);
+    color: #FFFFFF;
 }
 
 .contact-line:hover {
-    color: var(--color-blanco);
+    color: #FFFFFF;
     text-decoration: underline;
 }
 
@@ -87,15 +85,15 @@
 }
 
 .top-social-icons a:hover {
-    background-color: var(--color-blanco);
-    color: var(--color-primario);
-    border-color: var(--color-blanco);
+    background-color: #FFFFFF;
+    color: var(--color-primario, #C00000);
+    border-color: #FFFFFF;
     transform: translateY(-1px);
 }
 
 /* 🔹 Menú de Navegación Principal (Sticky) */
 .menu-bar {
-    background-color: var(--color-blanco);
+    background-color: #FFFFFF;
     border-bottom: 1px solid #EAEAEA;
     padding: 10px 0;
     position: sticky;
@@ -139,7 +137,7 @@
 }
 
 .menu-bar ul.nav-links > li a {
-    color: var(--color-texto); /* ✅ Actualizado */
+    color: var(--color-texto, #333333);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -158,13 +156,13 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-primario);
+    background-color: var(--color-primario, #C00000);
     transition: width 0.3s ease;
 }
 
 .menu-bar ul.nav-links > li a:hover,
 .menu-bar ul.nav-links > li a.active {
-    color: var(--color-primario);
+    color: var(--color-primario, #C00000);
 }
 
 .menu-bar ul.nav-links > li a:hover::after,
@@ -181,7 +179,7 @@
 
 .menu-bar li.dropdown:hover .item-arrow {
     transform: rotate(180deg);
-    color: var(--color-primario);
+    color: var(--color-primario, #C00000);
 }
 
 .menu-bar ul.nav-links > li.dropdown::after {
@@ -198,7 +196,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--color-blanco);
+    background-color: #FFFFFF;
     width: 230px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     padding: 8px 0;
@@ -227,9 +225,8 @@
     width: 100%;
     padding: 11px 24px !important;
     text-align: left !important;
-    color: var(--color-texto); /* ✅ Actualizado */
+    color: var(--color-texto, #333333);
     text-decoration: none;
-    font-family: var(--fuente-base);
     font-weight: 500;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -239,13 +236,82 @@
 }
 
 .dropdown-menu li a:hover {
-    color: var(--color-primario) !important;
+    color: var(--color-primario, #C00000) !important;
     background-color: #FFF0F0 !important;
-    text-align: left !important;
-    padding: 11px 24px !important;
 }
 
+/* 🔹 Animación del Desplegable */
 @keyframes dropdownFadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { 
+        opacity: 0; 
+        transform: translateY(8px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* 🔹 Botón de Mi Carrito */
+.cart-container {
+    display: flex;
+    align-items: center;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
+    transition: opacity 0.2s ease;
+}
+
+.cart-btn:hover {
+    opacity: 0.7;
+}
+
+.cart-icon {
+    color: #111111;
+    font-size: 15px;
+}
+
+.cart-text {
+    color: #111111;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: inherit;
+    text-transform: none;
+}
+
+/* 🔹 Botón Hamburguesa (Oculto en desktop, visible en móviles) */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #111111;
+}
+
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
 }

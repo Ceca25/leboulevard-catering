@@ -4,24 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Le Boulevard Catering</title>
+    <!-- Hojas de Estilo -->
     <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Iconos de Font Awesome v6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
 </head>
 <body class="page-nosotros">
     
-    <!-- Contenedor dinámico donde JavaScript inyectará el Header y el Menú Global -->
-    <div id="header"></div>
+    <!-- ==========================================
+         ENCABEZADO (HEADER ESTÁTICO PROFESIONAL)
+         ========================================== -->
+    <header>
+        <!-- Barra Superior (Top Bar Premium) -->
+        <div class="top-bar">
+            <div style="max-width: 1200px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; box-sizing: border-box;">
+                <!-- Bloque Izquierdo: Datos de contacto -->
+                <div class="contact-block">
+                    <a href="https://wa.me/51924668399" target="_blank" rel="noopener noreferrer" class="contact-line">
+                        <i class="fa-brands fa-whatsapp"></i> <span>+51 924668399</span>
+                    </a>
+                    <div class="contact-line item-location">
+                        <i class="fa-solid fa-location-dot"></i> <span>Trujillo, La Libertad, Perú</span>
+                    </div>
+                </div>
+                
+                <!-- Bloque Derecho: Redes Sociales -->
+                <div class="social-container">
+                    <div class="top-social-icons">
+                        <a href="https://facebook.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/LeboulevardCat" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://tiktok.com/@leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Menú de Navegación Sticky -->
+        <nav class="menu-bar">
+            <div class="nav-container">
+                <!-- Botón Hamburguesa -->
+                <button class="hamburger-btn" id="hamburgerBtn" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo a la izquierda -->
+                <div class="logo-container"> 
+                    <a href="index.html">
+                        <img src="img/logo/logo-leboulevard.png" alt="Le Boulevard Catering" class="logo">
+                    </a>   
+                </div>
+                
+                <!-- Enlaces de Navegación -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html" class="active">Nosotros</a></li>
+            
+                    <li class="dropdown">
+                        <a href="servicios.html" class="dropdown-toggle">Servicios <i class="fa-solid fa-chevron-down item-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                                <li><a href="servicios/adornos.html">Decoración</a></li>
+                                <li><a href="servicios/menaje.html">Menaje</a></li>
+                                <li><a href="servicios/cuberteria.html">Cuberterías</a></li>
+                                <li><a href="servicios/cristaleria.html">Cristalería</a></li>
+                                <li><a href="servicios/coffee-break.html">Estaciones de Café</a></li>
+                                <li><a href="servicios/grill.html">Equipos de Parrilla</a></li>
+                                <li><a href="servicios/mobiliario.html">Mobiliario</a></li>
+                                <li><a href="servicios/manteleria.html">Mantelería</a></li>
+                                <li><a href="servicios/mozos.html">Personal - Eventos</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+
+                <!-- Carrito / Cotizador -->
+                <div class="cart-container">
+                    <a href="cotizacion.html" class="cart-btn">
+                        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <span class="cart-text">
+                            <span id="cart-count">0</span> productos - S/. <span id="cart-total">0</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- ==========================================
          CONTENIDO PRINCIPAL (MAIN)
          ========================================== -->
-    
-<main>
-        <!-- Sección Nosotros (Diseño de 2 columnas forzado y limpio) -->
+    <main>
+        <!-- Sección Nosotros (Diseño de 2 columnas) -->
         <section class="nosotros" style="background-color: #FAFAFA; padding: 60px 20px; width: 100%; box-sizing: border-box;">
             <div class="nosotros-container" style="display: flex; flex-direction: row; flex-wrap: nowrap; max-width: 1200px; margin: 0 auto; gap: 40px; align-items: center; box-sizing: border-box;">
                 
@@ -58,18 +135,20 @@
             </div>
         </section>
         
+        <!-- Botón Flotante de WhatsApp 
         <a href="https://wa.me/51924668399" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Cotiza por WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
-        </a>
+        </a>  -->
     </main>
-    <!-- Contenedor dinámico donde JavaScript inyectará el Footer de la marca -->
+
+    <!-- ==========================================
+         FOOTER DINÁMICO (MODULAR)
+         ========================================== -->
     <div id="footer"></div>
 
-    <!-- Script Maestro encargado de cargar de forma asíncrona los componentes comunes -->
+    <!-- ==========================================
+         SCRIPT MAESTRO
+         ========================================== -->
     <script src="js/include.js"></script>
-
-
 </body>
-
-
 </html>

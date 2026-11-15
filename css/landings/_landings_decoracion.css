@@ -1,0 +1,633 @@
+/* ==========================================================================
+   ESTILOS PARA LA PÁGINA DE ADORNOS Y DECORACIÓN (LE BOULEVARD CATERING)
+   ========================================================================== */
+
+/* Contenedor Principal */
+.landing-decoracion .catalogo-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================
+   HERO BANNER PROFESIONAL DE CATEGORÍA
+   ========================================================== */
+.landing-decoracion .categoria-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 45px 50px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+}
+
+.landing-decoracion .categoria-hero-content {
+    flex: 1.2;
+    text-align: left;
+}
+
+.landing-decoracion .categoria-badge {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C00000;
+    background-color: #FDF2F2;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.landing-decoracion .categoria-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #1A1A1A;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.landing-decoracion .categoria-hero-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.7;
+    margin: 0 0 25px 0;
+    font-weight: 300;
+}
+
+.landing-decoracion .categoria-hero-features {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.landing-decoracion .categoria-hero-features li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: #333333;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.landing-decoracion .categoria-hero-features li i {
+    color: #C00000;
+}
+
+.landing-decoracion .categoria-hero-image {
+    flex: 1;
+    max-width: 480px;
+    position: relative;
+}
+
+.landing-decoracion .categoria-hero-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* ==========================================================
+   CUADRÍCULA DE PRODUCTOS (GRID RESPONSIVE AL 100%)
+   ========================================================== */
+.landing-decoracion .productos-section {
+    width: 100%;
+}
+
+.landing-decoracion .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta Premium de Artículo */
+.landing-decoracion .product-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-decoracion .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenedor de imagen con efecto Hover */
+.landing-decoracion .product-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.landing-decoracion .product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.landing-decoracion .product-image .img-default {
+    opacity: 1;
+    z-index: 2;
+}
+
+.landing-decoracion .product-image .img-hover {
+    opacity: 0;
+    z-index: 1;
+}
+
+.landing-decoracion .product-card:hover .product-image .img-default {
+    opacity: 0;
+}
+
+.landing-decoracion .product-card:hover .product-image .img-hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.landing-decoracion .product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.landing-decoracion .product-info h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #222;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.landing-decoracion .product-desc {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.landing-decoracion .product-price {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #C00000;
+    margin-bottom: 12px;
+}
+
+.landing-decoracion .product-price small {
+    font-size: 12px;
+    color: #777;
+    font-weight: 400;
+}
+
+/* ==========================================================
+   SELECTORES DE CANTIDAD MODERNOS
+   ========================================================== */
+.landing-decoracion .quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: #fafafa;
+    max-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing-decoracion .qty-btn {
+    background: #f0f0f0;
+    border: none;
+    color: #333;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.landing-decoracion .qty-btn:hover {
+    background: #e2e2e2;
+    color: #C00000;
+}
+
+.landing-decoracion .qty-input {
+    width: 45px;
+    height: 35px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    background: transparent;
+}
+
+.landing-decoracion .qty-input::-webkit-outer-spin-button,
+.landing-decoracion .qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botón Estilo Píldora: Agregar al Carrito */
+.landing-decoracion .btn-add-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 42px;
+    padding: 3px 3px 3px 16px;
+    background-color: #C80000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+    box-shadow: 0 4px 10px rgba(200, 0, 0, 0.2);
+}
+
+.landing-decoracion .btn-add-pill:hover {
+    background-color: #a30000;
+    transform: translateY(-1px);
+}
+
+.landing-decoracion .btn-pill-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.landing-decoracion .btn-pill-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    color: #C80000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* Botón Clásico Añadir (Respaldo si se usa en otras tarjetas) */
+.landing-decoracion .btn-add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #C00000;
+    color: #C00000;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.landing-decoracion .btn-add-to-cart:hover {
+    background: #C00000;
+    color: #ffffff;
+}
+
+/* ==========================================================
+   CARRITO DESPLEGABLE LATERAL DERECHO
+   ========================================================== */
+.landing-decoracion .cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2000;
+    display: none;
+    backdrop-filter: blur(2px);
+}
+
+.landing-decoracion .cart-overlay.active {
+    display: block;
+}
+
+.landing-decoracion .cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 400px;
+    max-width: 92vw;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -6px 0 25px rgba(0, 0, 0, 0.18);
+    z-index: 2001;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.landing-decoracion .cart-sidebar.active {
+    right: 0;
+}
+
+/* Cabecera Roja */
+.landing-decoracion .cart-header-red {
+    background-color: #C80000;
+    color: #ffffff;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-decoracion .cart-header-red h2 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.landing-decoracion .close-cart-text {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.landing-decoracion .close-cart-text span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* Cabecera Clásica (Respaldo) */
+.landing-decoracion .cart-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-decoracion .cart-header h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.landing-decoracion .close-cart {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.landing-decoracion .close-cart:hover {
+    color: #C00000;
+}
+
+/* Lista de Ítems */
+.landing-decoracion .cart-items-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.landing-decoracion .cart-item-row {
+    display: flex;
+    gap: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ececec;
+    align-items: flex-start;
+}
+
+.landing-decoracion .cart-item-thumb {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 4px;
+    background: #fff;
+}
+
+.landing-decoracion .cart-item-body {
+    flex: 1;
+    text-align: left;
+}
+
+.landing-decoracion .cart-item-brand {
+    font-size: 11px;
+    color: #888;
+    display: block;
+}
+
+.landing-decoracion .cart-item-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin: 2px 0 4px 0;
+}
+
+.landing-decoracion .cart-item-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1A1A1A;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.landing-decoracion .cart-mini-qty {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.landing-decoracion .cart-mini-qty button {
+    background: #fff;
+    border: none;
+    width: 28px;
+    height: 26px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #333;
+}
+
+.landing-decoracion .cart-mini-qty button:hover {
+    background: #f3f3f3;
+}
+
+.landing-decoracion .cart-mini-qty span {
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.landing-decoracion .cart-item-delete {
+    background: none;
+    border: none;
+    color: #b0b0b0;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.landing-decoracion .cart-item-delete:hover {
+    color: #C80000;
+}
+
+/* Resumen Inferior */
+.landing-decoracion .cart-footer-summary {
+    padding: 20px 22px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.landing-decoracion .summary-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #1A1A1A;
+    text-align: left;
+}
+
+.landing-decoracion .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.landing-decoracion .summary-row .text-muted {
+    color: #777;
+}
+
+.landing-decoracion .summary-row.total-row {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.landing-decoracion .btn-checkout-pill {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background-color: #C80000;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    transition: background 0.2s;
+}
+
+.landing-decoracion .btn-checkout-pill:hover {
+    background-color: #9e0000;
+}
+
+.landing-decoracion .btn-whatsapp-pill {
+    width: 100%;
+    padding: 11px;
+    background-color: #25D366;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.landing-decoracion .btn-whatsapp-pill:hover {
+    background-color: #1ebe5d;
+}
+
+.landing-decoracion .cart-notice {
+    font-size: 11px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+@media (max-width: 900px) {
+    .landing-decoracion .categoria-hero {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    .landing-decoracion .categoria-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .landing-decoracion .categoria-hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    .landing-decoracion .categoria-hero-image img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-decoracion .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}

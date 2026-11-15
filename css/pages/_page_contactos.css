@@ -1,0 +1,297 @@
+/* ==========================================================
+   ESTILOS DEL ENCABEZADO DE CONTACTO (CENTRADO PREMIUM)
+   ========================================================== */
+.page-contactos .section-header-premium {
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto 40px auto !important;
+    box-sizing: border-box !important;
+}
+
+.page-contactos .section-header-premium .header-titulo-principal {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.5rem !important;
+    color: #C00000 !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+}
+
+.page-contactos .section-header-premium .header-subtitulo-decorativo {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    color: #1A1A1A !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+}
+
+.page-contactos .section-header-premium .header-descripcion-corta {
+    font-family: 'Roboto', sans-serif !important;
+    color: #666666 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+}
+
+.page-contactos .section-header-premium .header-linea-separadora {
+    width: 60px !important;
+    height: 3px !important;
+    background-color: #C00000 !important;
+    margin: 0 auto !important;
+}
+
+
+/* ==========================================================================
+   FORMULARIOS, SECCIÓN DE CONTACTO Y COTIZADOR DINÁMICO (PREMIUM)
+   ========================================================================== */
+
+/* Contenedor Principal (Layout de Dos Columnas) */
+.page-contactos .contacto-layout-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr; /* Ajuste sutil de proporciones */
+    gap: 40px;
+    max-width: 1300px; 
+    margin: 40px auto 80px auto; 
+    padding: 0 30px; 
+    align-items: start;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   COLUMNA IZQUIERDA: FORMULARIO
+   ========================================== */
+.page-contactos .formulario-simple {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 40px 35px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.page-contactos .formulario-simple h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1A1A1A;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-contactos .formulario-simple h2 i {
+    color: #C00000;
+}
+
+/* Formulario interno estructurado con CSS Grid */
+.page-contactos .formulario-simple form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Bloque contenedor de cada etiqueta e input */
+.page-contactos .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 💡 CORREGIDO: Selector unificado con guion medio correcto */
+.page-contactos .formulario-simple label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #2D2D2D;
+}
+
+/* Asterisco de campo obligatorio */
+.page-contactos .formulario-simple label .req {
+    color: #C00000;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* Inputs de texto, fecha y áreas de mensaje */
+.page-contactos .formulario-simple input,
+.page-contactos .formulario-simple textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #DCDCDC;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: #2D2D2D;
+    background-color: #FAFAFA;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.page-contactos .formulario-simple input:focus,
+.page-contactos .formulario-simple textarea:focus {
+    outline: none;
+    border-color: #C00000;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.08);
+}
+
+/* Propiedad para forzar a que un elemento abarque las 2 columnas */
+.page-contactos .textarea-full {
+    grid-column: span 2;
+}
+
+/* Casilla de Políticas de Privacidad */
+.page-contactos .politicas-checkbox {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.page-contactos .politicas-checkbox label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: #555555;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.page-contactos .politicas-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #C00000;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.page-contactos .politicas-checkbox label a {
+    color: #C00000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.page-contactos .politicas-checkbox label a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de Enviar Formulario */
+.page-contactos .btn-form {
+    display: block;
+    width: 100%;
+    background-color: #C00000;
+    color: #FFFFFF;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.15);
+}
+
+.page-contactos .btn-form i {
+    margin-right: 8px;
+}
+
+.page-contactos .btn-form:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   COLUMNA DERECHA: MULTIMEDIA Y ACCESO ONLINE
+   ========================================== */
+.page-contactos .columna-derecha-cotizador {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta contenedora de la foto referencial */
+.page-contactos .tarjeta-referencia-galeria {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-contactos .img-referencia {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bloque inferior: "Cotiza tu evento en línea" */
+.page-contactos .tarjeta-cotizar-linea {
+    background-color: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.page-contactos .tarjeta-cotizar-linea h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1A1A1A;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.page-contactos .tarjeta-cotizar-linea h3 i {
+    color: #C00000;
+    margin-right: 6px;
+}
+
+.page-contactos .tarjeta-cotizar-linea p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.92rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Botón estilizado para Cotizar Online lateral */
+.page-contactos .btn-cotizar-online {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C00000;
+    color: #FFFFFF;
+    padding: 13px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.15);
+}
+
+.page-contactos .btn-cotizar-online i {
+    margin-right: 8px;
+}
+
+.page-contactos .btn-cotizar-online:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}

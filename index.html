@@ -4,44 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Le Boulevard Catering</title>
-    <!-- CSS Unificado (Asegúrate de que la carpeta coincida si usas mayúsculas/minúsculas 'CSS' o 'css') -->
+    <!-- CSS Unificado -->
     <link rel="stylesheet" href="css/estilos.css">
     <!-- Tipografías Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Iconos Gratuitos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
 </head>
 <body class="page-inicio">
 
-    <!-- Header dinámico -->
-    <div id="header"></div>
+    <!-- Header Estático Profesional (Cero Saltos) -->
+    <header>
+        <div class="top-bar">
+            <!-- Bloque Izquierdo: Datos de contacto -->
+            <div class="contact-block">
+                <a href="https://wa.me/51924668399" target="_blank" rel="noopener noreferrer" class="contact-line">
+                    <i class="fa-brands fa-whatsapp"></i> <span>+51 924668399</span>
+                </a>
+                <div class="contact-line item-location">
+                    <i class="fa-solid fa-location-dot"></i> <span>Trujillo, La Libertad, Perú</span>
+                </div>
+            </div>
+            
+            <!-- Bloque Derecho: Redes Sociales -->
+            <div class="social-container">
+                <div class="top-social-icons">
+                    <a href="https://facebook.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/LeboulevardCat" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-bar">
+            <div class="nav-container">
+                <!-- Botón Hamburguesa -->
+                <button class="hamburger-btn" id="hamburgerBtn" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo a la izquierda -->
+                <div class="logo-container"> 
+                    <a href="index.html">
+                        <img src="img/logo/logo-leboulevard.png" alt="Le Boulevard Catering" class="logo">
+                    </a>   
+                </div>
+                
+                <!-- Enlaces de Navegación -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+            
+                    <li class="dropdown">
+                        <a href="servicios.html" class="dropdown-toggle">Servicios <i class="fa-solid fa-chevron-down item-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                                <li><a href="servicios/adornos.html">Decoración</a></li>
+                                <li><a href="servicios/menaje.html">Menaje</a></li>
+                                <li><a href="servicios/cuberteria.html">Cuberterías</a></li>
+                                <li><a href="servicios/cristaleria.html">Cristalería</a></li>
+                                <li><a href="servicios/coffee-break.html">Estaciones de Café</a></li>
+                                <li><a href="servicios/grill.html">Equipos de Parrilla</a></li>
+                                <li><a href="servicios/mobiliario.html">Mobiliario</a></li>
+                                <li><a href="servicios/manteleria.html">Mantelería</a></li>
+                                <li><a href="servicios/mozos.html">Personal - Eventos</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+
+                <!-- Carrito / Cotizador -->
+                <div class="cart-container">
+                    <a href="cotizacion.html" class="cart-btn">
+                        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <span class="cart-text">
+                            <span id="cart-count">0</span> productos - S/. <span id="cart-total">0</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <!-- SECCIÓN 1: HERO CON CARRUSEL DE 5 IMÁGENES -->
         <section class="hero">
-            <!-- Carrusel de 5 imágenes de fondo -->
             <div class="hero-carousel">
-                <img src="img/inicio/menaje123.jpeg" alt="Le Boulevard 1" class="active">
-                <img src="img/inicio/cofe break.jpeg" alt="Le Boulevard 2">
-                <img src="img/inicio/menaje5756.jpeg" alt="Le Boulevard 3">
-                <img src="img/inicio/cofee1.jpeg" alt="Le Boulevard 4">
-                <img src="img/inicio/menaje986.jpeg" alt="Le Boulevard 5">
+                <div class="hero-slide active" style="background-image: url('img/inicio/menaje986.jpeg');"></div>
+                <div class="hero-slide" style="background-image: url('img/inicio/coffebrek1.jpeg');"></div>
+                <div class="hero-slide" style="background-image: url('img/inicio/cajachina.png');"></div>
+                <div class="hero-slide" style="background-image: url('img/inicio/coctel1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('img/inicio/mozobarmanseguridad.png');"></div>
             </div>
 
-            <!-- Contenido del Hero -->
             <div class="hero-content">
                 <h1>Elegancia y calidad para tus eventos</h1>
                 <p>Ofrecemos alquiler de menaje, cristalería y servicios para tus celebraciones.</p>
-                <a href="contactos.html" class="cta"><i class="fas fa-calendar-check"></i> Cotiza tu evento</a>
             </div>
         </section>
 
-        <!-- SECCIÓN 2: TARJETAS INTERACTIVAS CON ICONO A LA IZQUIERDA -->
+        <!-- SECCIÓN 2: TARJETAS INTERACTIVAS -->
         <section class="steps-section">
             <div class="steps-container">
-                
                 <!-- Tarjeta 1: Cotización Online -->
                 <a href="contactos.html" class="step-card">
                     <div class="step-icon">
@@ -74,7 +140,6 @@
                         <p>Tenemos excelentes y competitivos precios</p>
                     </div>
                 </a>
-
             </div>
         </section>
     </main>
@@ -82,7 +147,7 @@
     <!-- Footer dinámico -->
     <div id="footer"></div>
 
-    <!-- Script Maestro encargado de cargar de forma asíncrona los componentes comunes -->
+    <!-- Script de interactividad general -->
     <script src="js/include.js"></script>
     
 </body>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adornos y Decoración - Le Boulevard Catering</title>
+    <!-- CSS Unificado -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!-- Tipografías Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Iconos Gratuitos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="landing-decoracion">
+    
+    <!-- ========================================== -->
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <!-- ========================================== -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-block">
+                <a href="https://wa.me/51924668399" target="_blank" rel="noopener noreferrer" class="contact-line">
+                    <i class="fa-brands fa-whatsapp"></i> <span>+51 924668399</span>
+                </a>
+                <div class="contact-line item-location">
+                    <i class="fa-solid fa-location-dot"></i> <span>Trujillo, La Libertad, Perú</span>
+                </div>
+            </div>
+            
+            <div class="social-container">
+                <div class="top-social-icons">
+                    <a href="https://facebook.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/LeboulevardCat" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@leboulevardcatering" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu-bar">
+            <div class="nav-container">
+                <button class="hamburger-btn" id="hamburgerBtn" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="logo-container"> 
+                    <a href="../index.html">
+                        <img src="../img/logo/logo-leboulevard.png" alt="Le Boulevard Catering" class="logo">
+                    </a>   
+                </div>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../nosotros.html">Nosotros</a></li>
+            
+                    <li class="dropdown">
+                        <a href="../servicios.html" class="dropdown-toggle active">Servicios <i class="fa-solid fa-chevron-down item-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="adornos.html" class="active">Decoración</a></li>
+                            <li><a href="menaje.html">Menaje</a></li>
+                            <li><a href="cuberteria.html">Cuberterías</a></li>
+                            <li><a href="cristaleria.html">Cristalería</a></li>
+                            <li><a href="coffee-break.html">Estaciones de Café</a></li>
+                            <li><a href="grill.html">Equipos de Parrilla</a></li>
+                            <li><a href="mobiliario.html">Mobiliario</a></li>
+                            <li><a href="manteleria.html">Mantelería</a></li>
+                            <li><a href="mozos.html">Personal - Eventos</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a href="../galeria.html">Galería</a></li>
+                    <li><a href="../contactos.html">Contactos</a></li>
+                </ul>
+
+                <!-- Carrito / Cotizador en el Header -->
+                <div class="cart-container">
+                    <a href="javascript:void(0)" class="cart-btn" onclick="openCart()">
+                        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                        <span class="cart-text">
+                            <span id="cart-count">0</span> productos - S/. <span id="cart-total">0.00</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================================== -->
+    <main>
+        <div class="catalogo-container">
+            
+            <!-- HERO BANNER DE CATEGORÍA -->
+            <div class="categoria-hero">
+                <div class="categoria-hero-content">
+                    <span class="categoria-badge">Catálogo Exclusivo</span>
+                    <h1>Adornos y Decoración</h1>
+                    <p>
+                        Transforma cualquier espacio en un escenario inolvidable. Descubre nuestra exclusiva selección de accesorios, candelabros, faroles y detalles diseñados para elevar la elegancia de tu evento en Trujillo.
+                    </p>
+                    <ul class="categoria-hero-features">
+                        <li><i class="fa-solid fa-check-circle"></i> Stock Garantizado</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Asesoría Personalizada</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Puntualidad Logística</li>
+                    </ul>
+                </div>
+                <div class="categoria-hero-image">
+                    <img src="../img/servicios/decoracion/banner-decoracion.webp" alt="Montaje de Decoración Le Boulevard">
+                </div>
+            </div>
+
+            <!-- CUADRÍCULA DE PRODUCTOS -->
+            <section class="productos-section">
+                <div class="product-grid" id="productGrid">
+                    
+                    <!-- Tarjeta 1: Candelabro -->
+                    <div class="product-card" data-category="decoracion" data-id="candelabro-madera" data-name="Candelabro de Madera" data-price="4.00">
+                        <div class="product-image">
+                            <img src="../img/servicios/decoracion/candelabros-01.webp" alt="CANDELABROS" class="img-default">
+                            <img src="../img/servicios/decoracion/candelabros-02.webp" alt="CANDELABROS" class="img-hover">
+                        </div>
+                        <div class="product-info">
+                            <h3>CANDELABRO</h3>
+                            <p class="product-desc">Candelabros de madera blanco 21cm - 15cm - 10cm.</p>
+                            <span class="product-price">S/. 4.00 <small>/ und</small></span>
+                            
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="decrementarCantidad(this)">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="999">
+                                <button type="button" class="qty-btn plus" onclick="incrementarCantidad(this)">+</button>
+                            </div>
+
+                            <button class="btn-add-pill" onclick="agregarAlCarrito(this)">
+                                <span class="btn-pill-text">AGREGAR AL CARRITO</span>
+                                <span class="btn-pill-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Caja Decorativa -->
+                    <div class="product-card" data-category="decoracion" data-id="caja-decorativa" data-name="Caja Decorativa Chica" data-price="0.00">
+                        <div class="product-image">
+                            <img src="../img/servicios/decoracion/caja-decorativa-01.webp" alt="CAJA DECORATIVA" class="img-default">
+                        </div>
+                        <div class="product-info">
+                            <h3>CAJA DECORATIVA</h3>
+                            <p class="product-desc">Caja decorativa chica</p>
+                            <span class="product-price">S/. 2.00 <small>/ und</small></span>
+                            
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="decrementarCantidad(this)">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="999">
+                                <button type="button" class="qty-btn plus" onclick="incrementarCantidad(this)">+</button>
+                            </div>
+
+                            <button class="btn-add-pill" onclick="agregarAlCarrito(this)">
+                                <span class="btn-pill-text">AGREGAR AL CARRITO</span>
+                                <span class="btn-pill-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Farol -->
+                    <div class="product-card" data-category="decoracion" data-id="farol-plastico" data-name="Farol My Home" data-price="0.00">
+                        <div class="product-image">
+                            <img src="../img/servicios/decoracion/farol-01.webp" alt="FAROL" class="img-default">
+                            <img src="../img/servicios/decoracion/farolc-02.webp" alt="FAROL" class="img-hover">
+                        </div>
+                        <div class="product-info">
+                            <h3>FAROL</h3>
+                            <p class="product-desc">Farol de plástico 13.5*13.5*34 cm - My Home.</p>
+                            <span class="product-price">S/. 5.00 <small>/ und</small></span>
+                            
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="decrementarCantidad(this)">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="999">
+                                <button type="button" class="qty-btn plus" onclick="incrementarCantidad(this)">+</button>
+                            </div>
+
+                            <button class="btn-add-pill" onclick="agregarAlCarrito(this)">
+                                <span class="btn-pill-text">AGREGAR AL CARRITO</span>
+                                <span class="btn-pill-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Florero -->
+                    <div class="product-card" data-category="decoracion" data-id="florero-tubo" data-name="Florero Tubo Transparente" data-price="0.00">
+                        <div class="product-image">
+                            <img src="../img/servicios/decoracion/florero-01.webp" alt="FLORERO" class="img-default">
+                        </div>
+                        <div class="product-info">
+                            <h3>FLORERO</h3>
+                            <p class="product-desc">Florero tubo transparente 12.5 cm.</p>
+                            <span class="product-price">S/. 4.00 <small>/ und</small></span>
+                            
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="decrementarCantidad(this)">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="999">
+                                <button type="button" class="qty-btn plus" onclick="incrementarCantidad(this)">+</button>
+                            </div>
+
+                            <button class="btn-add-pill" onclick="agregarAlCarrito(this)">
+                                <span class="btn-pill-text">AGREGAR AL CARRITO</span>
+                                <span class="btn-pill-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5: Jarrones Loza -->
+                    <div class="product-card" data-category="decoracion" data-id="jarrones-loza" data-name="Jarrones de Loza Blancos" data-price="0.00">
+                        <div class="product-image">
+                            <img src="../img/servicios/decoracion/jarrones-loza.webp" alt="JARRONES LOZA" class="img-default">
+                        </div>
+                        <div class="product-info">
+                            <h3>JARRONES LOZA</h3>
+                            <p class="product-desc">Jarrones de loza blancos.</p>
+                            <span class="product-price">S/. 5.00 <small>/ und</small></span>
+                            
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="decrementarCantidad(this)">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="999">
+                                <button type="button" class="qty-btn plus" onclick="incrementarCantidad(this)">+</button>
+                            </div>
+
+                            <button class="btn-add-pill" onclick="agregarAlCarrito(this)">
+                                <span class="btn-pill-text">AGREGAR AL CARRITO</span>
+                                <span class="btn-pill-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6: Letrero Love -->
+                    <div class="product-card" data-category="decoracion" data-id="letrero-love" data-name="Letrero LOVE a Pilas" data-price="0.00">
+                        <div class="product-image">
+                            <img src="../img/servicios/decoracion/letrero-love-01.webp" alt="LETRERO LOVE" class="img-default">
+                            <img src="../img/servicios/decoracion/letrero-love-02.webp" alt="LETRERO LOVE" class="img-hover">
+                        </div>
+                        <div class="product-info">
+                            <h3>LETRERO LOVE</h3>
+                            <p class="product-desc">LOVE - Letrero de plástico a pilas.</p>
+                            <span class="product-price">S/. 3.00 <small>/ und</small></span>
+                            
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="decrementarCantidad(this)">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="999">
+                                <button type="button" class="qty-btn plus" onclick="incrementarCantidad(this)">+</button>
+                            </div>
+
+                            <button class="btn-add-pill" onclick="agregarAlCarrito(this)">
+                                <span class="btn-pill-text">AGREGAR AL CARRITO</span>
+                                <span class="btn-pill-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 7: Pizarra LED -->
+                    <div class="product-card" data-category="decoracion" data-id="pizarra-led" data-name="Pizarra LED para Eventos" data-price="0.00">
+                        <div class="product-image">
+                            <img src="../img/servicios/decoracion/pizarra-led-01.webp" alt="PIZARRA LED" class="img-default">
+                        </div>
+                        <div class="product-info">
+                            <h3>PIZARRA LED</h3>
+                            <p class="product-desc">Pizarra led para eventos.</p>
+                            <span class="product-price">S/. 25.00 <small>/ und</small></span>
+                            
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn minus" onclick="decrementarCantidad(this)">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="999">
+                                <button type="button" class="qty-btn plus" onclick="incrementarCantidad(this)">+</button>
+                            </div>
+
+                            <button class="btn-add-pill" onclick="agregarAlCarrito(this)">
+                                <span class="btn-pill-text">AGREGAR AL CARRITO</span>
+                                <span class="btn-pill-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PANEL LATERAL DERECHO: MI CARRITO -->
+        <!-- ========================================== -->
+        <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+        <aside class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header-red">
+                <h2>Mi carrito</h2>
+                <button class="close-cart-text" onclick="closeCart()">
+                    CERRAR <span>&times;</span>
+                </button>
+            </div>
+
+            <div class="cart-items-container" id="cartItemsContainer">
+                <!-- Los productos agregados se renderizan aquí dinámicamente -->
+            </div>
+
+            <div class="cart-footer-summary">
+                <h3 class="summary-title">Resumen</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotalText">S/. 0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Entrega</span>
+                    <span class="text-muted">Por calcular</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>TOTAL</span>
+                    <strong id="cartTotalText">S/. 0.00</strong>
+                </div>
+                <p class="cart-notice">Tasas y fletes calculados en la cotización final.</p>
+                
+                <a href="../cotizaonline.html" class="btn-checkout-pill">VER COTIZACIÓN COMPLETA</a>
+                <button type="button" class="btn-whatsapp-pill" onclick="enviarCotizacionWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> ENVIAR A WHATSAPP
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer Modular -->
+    <div id="footer"></div>
+
+    <!-- Ruta corregida hacia la raíz (../) -->
+    <script src="../js/include.js"></script>
+
+</body>
+</html>

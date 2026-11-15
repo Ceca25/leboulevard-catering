@@ -8,7 +8,7 @@
 .page-inicio .hero {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 140px);
+    min-height: calc(80vh - 100px); /* Ajustado para dejar ver las tarjetas abajo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-/* Contenedor absoluto para las 5 imágenes de fondo */
+/* Contenedor absoluto para el carrusel de fondo */
 .page-inicio .hero-carousel {
     position: absolute;
     top: 0;
@@ -30,40 +30,40 @@
     z-index: 1;
 }
 
+/* Cada diapositiva con fondo adaptable, centrado y cubriendo toda la pantalla */
+.page-inicio .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+/* Diapositiva activa visible */
+.page-inicio .hero-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
 /* Capa oscura translúcida para garantizar que el texto blanco resalte con elegancia */
 .page-inicio .hero-carousel::after {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    z-index: 3;
 }
 
-/* Estilo individual de cada foto del carrusel (Ocultas por defecto) */
-.page-inicio .hero-carousel img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transform: scale(1.05);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    z-index: 1;
-}
-
-/* Imagen activa que se muestra en pantalla con efecto suave */
-.page-inicio .hero-carousel img.active {
-    opacity: 1;
-    transform: scale(1);
-    z-index: 2;
-}
-
-/* Contenido del Hero (Texto y Botón flotando por encima de las fotos) */
+/* Contenido del Hero (Texto y Botón flotando por encima de las fotos y la capa oscura) */
 .page-inicio .hero-content {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     max-width: 900px;
     padding: 20px;
 }
@@ -109,9 +109,6 @@
 
 
 /* --- 2. SECCIÓN DE PASOS / PROCESO (Debajo del Hero) --- */
-/* ==========================================================================
-   SECCIÓN DE TARJETAS CON ICONO A LA IZQUIERDA (_page_inicio.css)
-   ========================================================================== */
 .page-inicio .steps-section {
     background-color: var(--color-fondo);
     padding: 70px 20px;
@@ -136,12 +133,12 @@
     border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     padding: 25px 25px;
-    text-align: left; /* Alineado a la izquierda */
+    text-align: left;
     flex: 1 1 320px;
     max-width: 380px;
     display: flex;
-    align-items: center; /* Centra verticalmente el icono con el texto */
-    gap: 20px; /* Espacio entre el icono y el texto */
+    align-items: center;
+    gap: 20px;
     text-decoration: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -152,9 +149,9 @@
     box-shadow: 0 15px 35px rgba(192, 0, 0, 0.12);
 }
 
-/* Contenedor del Icono a la izquierda (Tamaño controlado) */
+/* Contenedor del Icono a la izquierda */
 .page-inicio .step-icon {
-    flex-shrink: 0; /* Evita que el icono se deforme */
+    flex-shrink: 0;
     width: 55px;
     height: 55px;
     background-color: var(--color-primario);
@@ -163,12 +160,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px; /* Bordes ligeramente redondeados estilo moderno */
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(192, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
-/* Animación sutil en el icono al pasar el cursor */
 .page-inicio .step-card:hover .step-icon {
     transform: scale(1.08);
 }

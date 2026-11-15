@@ -1,5 +1,5 @@
 /* ==========================================================
-   6. SECCIÓN NOSOTROS — Página Específica (.page-nosotros)
+   SECCIÓN NOSOTROS — Página Específica (.page-nosotros)
    ========================================================== */
 
 .page-nosotros .nosotros {
@@ -58,3 +58,104 @@
     margin: 0 0 16px 0;
     font-weight: 300;
 }
+
+/* ==========================================================================
+   SECCIÓN PROCESOS DE ALQUILER (TARJETAS TRIDIMENSIONALES)
+   ========================================================================== */
+.page-nosotros .procesos {
+    background-color: #FFFFFF;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.page-nosotros .procesos h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: #C00000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.page-nosotros .procesos h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #1A1A1A;
+    margin: 0 0 10px 0;
+}
+
+.page-nosotros .procesos > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 45px;
+}
+
+/* Grid Autoadaptable de 6 pasos */
+.page-nosotros .procesos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.page-nosotros .proceso {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    padding: 35px 25px 25px 25px;
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Círculos numéricos flotantes */
+.page-nosotros .proceso span {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #C00000;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(192, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.page-nosotros .proceso h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #1A1A1A;
+    margin: 10px 0 10px 0;
+}
+
+.page-nosotros .proceso p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: #666666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Animaciones Interactivas del Proceso */
+.page-nosotros .proceso:hover {
+    transform: translateY(-5px);
+    border-color: transparent;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.page-nosotros .proceso:hover span {
+    background-color: #1A1A1A;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+

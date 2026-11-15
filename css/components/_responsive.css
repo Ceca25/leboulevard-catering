@@ -2,7 +2,7 @@
    LE BOULEVARD — Diseño Responsivo
    Media Queries · Adaptable a todos los dispositivos
    ========================================================== */
-   
+
 /* --- 1. MÓVILES PEQUEÑOS Y CELULARES (Hasta 600px) --- */
 @media (max-width: 600px) {
     /* Barra superior de contacto */
@@ -15,11 +15,13 @@
     
     .social-container {
         align-items: center;
+        justify-content: center;
     }
 
     .contact-block {
         flex-direction: column;
         gap: 5px;
+        align-items: center;
     }
 
     /* Secciones generales y nosotros */
@@ -63,14 +65,13 @@
     }
 
     .page-inicio .steps-container {
-        gap: 35px; /* Espacio extra para que el número flotante no se encime */
+        gap: 35px;
     }
 
     .page-inicio .step-card {
         max-width: 100%;
         padding: 35px 20px 25px 20px;
     }
-    /* -------------------------------------------------------- */
     
     /* Formularios y Cotizadores */
     .formulario-simple, .cotizador {
@@ -95,19 +96,65 @@
         grid-template-columns: 1fr;
     }
     
-    /* Footer adaptado a móviles */
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+
+/* ==========================================================
+   MEDIA QUERY RESPONSIVE — Sección Nosotros (Móviles)
+   ========================================================== */
+@media (max-width: 968px) {
+    .page-nosotros .nosotros-container {
+        flex-direction: column !important;
         gap: 30px;
-        padding: 0 20px;
+    }
+    
+    .page-nosotros .nosotros-img img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .page-nosotros .nosotros-text {
+        text-align: center !important;
+    }
+
+    .page-nosotros .nosotros-text h1 {
+        text-align: center !important;
+        font-size: 2rem;
+    }
+}
+
+    /* Footer adaptado a móviles de forma estricta y centrada */
+    .footer-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+        padding: 0 20px !important;
     }
     
     .footer-column {
-        align-items: center;
-        text-align: center;
-        flex: 1 1 100%;
+        align-items: center !important;
+        text-align: center !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
+    }
+
+    .footer-column.col-logo {
+        flex: unset !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .footer-brand-logo {
+        margin: 0 auto !important;
+    }
+
+    .footer-info-item {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .footer-social-icons {
+        justify-content: center !important;
     }
 
     /* Galería de eventos */
